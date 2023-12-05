@@ -1,16 +1,18 @@
-/*QUESTÃO 06: Escrever um algoritmo que, dados um número inteiro i e três valores a, b e
-c, apresente os 3 números na ordem definida por i, como descrito abaixo:
-	a) i = 1: os três valores em ordem crescente;
-	b) i = 2: os três valores em ordem decrescente;
+/*
+QUESTÃƒO 06: Escrever um algoritmo que, dados um nÃºmero inteiro i e trÃªs valores a, b e c, apresente os 3 nÃºmeros na ordem definida por i, como descrito 
+abaixo:
+
+	a) i = 1: os trÃªs valores em ordem crescente;
+	b) i = 2: os trÃªs valores em ordem decrescente;
 	c) i = 3: o maior valor deve ser apresentado no meio dos outros.
 */
 
-//Importação de bibliotecas
+//ImportaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
 void main()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	float a, b, c, maior, menor, meio;
 	int i;
 	
@@ -71,7 +73,7 @@ void main()
 		}
 	}
 	
-	//exibindo os valores de acordo com o código i
+	//exibindo os valores de acordo com o cÃ³digo i
 	switch (i)
 	{
 		//ordem crescente
