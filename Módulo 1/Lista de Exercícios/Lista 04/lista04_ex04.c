@@ -1,20 +1,18 @@
-/* Lista IV - ExercÌcio 4
-
-   QUEST√O 04:
-   Implementar um programa que exiba os N primeiros termos de uma PA (Progress„o 
-   AritmÈtica) com primeiro termo a1 e raz„o r. 
+/*
+QUEST√ÉO 04: Implementar um programa que exiba os N primeiros termos de uma PA (Progress√£o Aritm√©tica) com primeiro termo a1 e raz√£o r. 
    
-   Exemplo:		a1 = 2, r = 4, n = 6
-   				PA: 2, 6, 10, 14, 18, 22
+Exemplo: a1 = 2, r = 4, n = 6
+
+PA: 2, 6, 10, 14, 18, 22
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
 //main
 void main ()
 {
-	//DeclaraÁ„o de vari·veis
+	//Declara√ß√£o de vari√°veis
 	int n, a1, r, termo, i;
 	
 	//Leitura dos dados de entrada
@@ -27,7 +25,7 @@ void main ()
 	printf ("Entre com a razao: ");
 	scanf ("%d", &r);
 	
-	termo = a1;  //armazenar· cada um dos n termos a serem exibidos
+	termo = a1;  //armazenar√° cada um dos n termos a serem exibidos
 	
 	//exibindo os elementos da PA
 	for (i=1;i<=n;i++)
