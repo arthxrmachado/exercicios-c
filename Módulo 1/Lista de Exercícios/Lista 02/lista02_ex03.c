@@ -8,32 +8,22 @@ Faca um algoritmo que permita ao lojista informar o preco do produto e receber a
 	c) O valor da prestacao para parcelamento com juros, em 10x, com 20% de acrescimo no valor do produto.
 */
 
-//Importacao de bibliotecas
-#include <stdio.h>
+#include<stdio.h>
 
-void main ()
+int main()
 {
-	//declaracao de variaveis
-	float valor, aVista, pSemJuros, pComJuros;
+	//variáveis
+	float preco, preco_desconto, preco_parcelado, preco_juros;
 	
-	//leitura do valor do produto
-	printf ("Entre com o valor do produto: ");
-	scanf ("%f", &valor);
+	//corpo do programa
+	printf("Escreva o preco do produto: ");
+	scanf("%f" , &preco);
 	
-	//calculando o valor de pagamento a vista
-	//aVista = valor - (0.1*valor);
-	aVista = valor*0.9;
+	preco_desconto=preco*0.9;
+	preco_parcelado=preco/5;
+	preco_juros=(preco*1.2)/10;
 	
-	//calculando o valor da parcela (sem juros)
-	pSemJuros = valor/5;
-	
-	//calculando o valor da parcela (com juros)
-	//pComJuros = (valor + valor*0.2) /10;  
-	pComJuros = (valor*1.2)/10;
-	
-	//exibindo os resultados
-	printf ("Valor do produto: R$ %.2f\n", valor);
-	printf ("\tA vista: R$ %.2f\n", aVista);
-	printf ("\tParcelamento sem juros: 5 x R$ %.2f\n", pSemJuros);
-	printf ("\tParcelamento com juros: 10 x R$ %.2f\n", pComJuros);
+	printf("\nO preco com 10%% de desconto e: %f" , preco_desconto);
+	printf("\n\nO preco parcelado em cinco vezes e: %f" , preco_parcelado);
+	printf("\n\nO preco parcelado em dez vezes com juros de 20%% e: %f" , preco_juros);
 }
