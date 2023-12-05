@@ -1,17 +1,14 @@
-/* Lista IV - ExercÌcio 6
-
-   QUEST√O 06: Criar um programa que exiba os N primeiros termos da seguinte sÈrie:  
- 
-									1,2,8,64,1024,... 
+/*
+QUEST√ÉO 06: Criar um programa que exiba os N primeiros termos da seguinte s√©rie: 1,2,8,64,1024,...
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
 //main
 void main ()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int n, i, termo, razao;
 	
 	//Leitura dos dados de entrada
