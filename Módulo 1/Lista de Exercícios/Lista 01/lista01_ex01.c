@@ -1,4 +1,4 @@
-//Dado o custo de fábrica, a porcentagem do distribuidor e a porcentagem dos impostos, o programa calcula o custo total de um carro.
+// Dado o custo de fábrica, a porcentagem do distribuidor e a porcentagem dos impostos, o programa calcula o custo total de um carro.
 
 #include <stdio.h>
 
