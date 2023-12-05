@@ -4,7 +4,7 @@
 
 main(){
 
-	//vari�veis
+	//variáveis
 	int valor, resto, cem, cinquenta, vinte, dez, cinco, dois, um;
 	
 	//corpo do programa
