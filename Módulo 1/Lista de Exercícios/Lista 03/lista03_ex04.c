@@ -1,20 +1,25 @@
-/*QUESTÃO 04: Faça um programa que leia 300 números reais. Ao final, devem ser exibidas as seguintes informações:a) A quantidade de valores negativos digitados;b) A média dos valores positivos.*/
+/*
+QUESTÃƒO 04: FaÃ§a um programa que leia 300 nÃºmeros reais. Ao final, devem ser exibidas as seguintes informaÃ§Ãµes:
+
+a) A quantidade de valores negativos digitados;
+b) A mÃ©dia dos valores positivos.
+*/
 
 #include <stdio.h>
 
 void main (){
 	
-	//variáveis
+	//variÃ¡veis
 	
 	int i, num, numNeg, numPos, QnumNeg, QnumPos, novoNumPos;
 	float divPos;
 	
-	//declaração de valores das variáveis
+	//declaraÃ§Ã£o de valores das variÃ¡veis
 	
 	QnumNeg=0;
 	QnumPos=0;
 	
-	//informações
+	//informaÃ§Ãµes
 	
 	for(i=1; i<=300; i++){
 		printf("Informe um numero: ");
@@ -23,21 +28,21 @@ void main (){
 		if(num<0){
 			numNeg=num;
 			
-			//contando quantos números negativos possui
+			//contando quantos nÃºmeros negativos possui
 			
 			QnumNeg=QnumNeg+1;
 		}else{
 			numPos=num;
 			
-			//contando quantos números positivos possui
+			//contando quantos nÃºmeros positivos possui
 			
 			QnumPos=QnumPos+1;
 			
-			//somando números positivos
+			//somando nÃºmeros positivos
 			
 			novoNumPos=novoNumPos+numPos;
 			
-			//dividindo a soma dos números positivos pela quantidade de números positivos para saber a média
+			//dividindo a soma dos nÃºmeros positivos pela quantidade de nÃºmeros positivos para saber a mÃ©dia
 			
 			divPos=novoNumPos/QnumPos;
 		}
