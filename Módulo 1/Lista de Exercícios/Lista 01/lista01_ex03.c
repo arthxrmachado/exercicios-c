@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 main (){
-	//vari�veis
+	//variáveis
 	float altura, peso_ideal;
 	char sexo;
 	
