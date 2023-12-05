@@ -11,26 +11,27 @@ Ao final, o algoritmo deve determinar:
 */
 
 //importacao de bibliotecas
-#include <stdio.h>
+#include<stdio.h>
 
-void main ()
+int main()
 {
-	//declaracao de variaveis
-	float km, kmL, precoComb, consumoViagem, custoComb;
+	//variáveis
+	int percurso, litro_km, quantidade_combustivel;
+	float preco, custo_total;
 	
-	//recebendo dados
-	printf("Percurso da viagem em km: ");
-	scanf("%f", &km);
-	printf("Quantos km por Litro de Combustível o veículo faz: ");
-	scanf("%f", &kmL);
-	printf("Preço litro de combustível: ");
-	scanf("%f", &precoComb);
-
-	//calculando valores
-	consumoViagem = km/kmL;
-	custoComb = consumoViagem*precoComb;
-
-	//exibindo resultados
-	printf("\nQuantidade de combustível consumidos na viagem: %.2f L", consumoViagem);
-	printf("\nCusto total de combustível da viagem: R$ %.2f \n", custoComb);	
+	//corpo do programa
+	printf("Escreva o percurso da viagem em km: ");
+	scanf("%i" , &percurso);
+	
+	printf("\nEscreva o numero de km que o carro percorre por litro: ");
+	scanf("%i" , &litro_km);
+	
+	printf("\nEscreva o preco do litro do combustivel: ");
+	scanf("%f" , &preco);
+	
+	quantidade_combustivel=percurso/litro_km;
+	custo_total=preco*quantidade_combustivel;
+	
+	printf("\nA quantidade de combustivel consumida durante a viagem e: %i litros" , quantidade_combustivel);
+	printf("\n\nO custo total do combustivel e: %0.2f" , custo_total);
 }
