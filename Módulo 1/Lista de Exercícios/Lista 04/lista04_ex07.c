@@ -1,23 +1,18 @@
 /*
-   FAC - Turma B
-   Data: 17/09/2020
-   
-   QUEST√O 07:
-   
-   Desenvolver um programa no qual o usu·rio entre com v·rios n˙meros inteiros e 
-   positivos e imprima o produto dos n˙meros Ìmpares e a soma dos n˙meros pares. 
+QUEST√ÉO 07: Desenvolver um programa no qual o usu√°rio entre com v√°rios n√∫meros inteiros e positivos e imprima o produto dos n√∫meros √≠mpares e a soma dos 
+n√∫meros pares. 
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
 //main
 void main ()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i, n, numero, soma = 0, produto = 1;
 	
-	//perguntando a quantidade de n˙meros que ser„o fornecidos
+	//perguntando a quantidade de n√∫meros que ser√£o fornecidos
 	printf ("Entre com a quantidade de numeros: ");
 	scanf ("%d", &n);
 	
@@ -29,7 +24,7 @@ void main ()
 			printf ("%do. numero: ", i);
 			scanf ("%d", &numero);
 			
-			//enviando msg ao usu·rio caso o numero n„o seja positivo
+			//enviando msg ao usu√°rio caso o numero n√£o seja positivo
 			if (numero <= 0)
 			{
 				printf ("\tErro: numero invalido! Tente novamente um valor positivo.\n");
@@ -37,12 +32,12 @@ void main ()
 		}
 		while (numero <= 0);
 		
-		//verificando se o n˙mero È par
+		//verificando se o n√∫mero √© par
 		if (numero % 2 == 0)
 		{
 			soma = soma + numero;  //soma += numero;
 		}
-		else  //È Ìmpar
+		else  //√© √≠mpar
 		{
 			produto = produto * numero;  //produto *= numero;
 		}
