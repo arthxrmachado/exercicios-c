@@ -1,9 +1,8 @@
-/*QUESTAO 02: Escrever um algoritmo que obtenha o peso de uma 
-pessoa na Terra e o numero de um planeta. Ao final, com auxilio 
-da tabela abaixo, calcular o peso desta pessoa no planeta 
-escolhido.
+/*
+QUESTÃO 02: Escrever um algoritmo que obtenha o peso de uma pessoa na Terra e o numero de um planeta. Ao final, com auxilio da tabela abaixo, calcular o 
+peso desta pessoa no planeta escolhido.
 
-Numero 	Planeta 	Gravidade Relativa g
+Numero 		Planeta 	Gravidade
 1 		Mercurio 	0,37
 2 		Venus 		0,88
 3 		Marte 		0,38
@@ -11,10 +10,7 @@ Numero 	Planeta 	Gravidade Relativa g
 5 		Saturno 	1,15
 6 		Urano 		1,17
 
-Para calcular o peso no planeta escolhido, utilize a seguinte 
-formula:
-
-		pesoPlaneta = (pesoTerra/10) * gravidadePlaneta
+Para calcular o peso no planeta escolhido, utilize a seguinte formula: pesoPlaneta = (pesoTerra/10) * gravidadePlaneta
 */
 
 //importacao de bibliotecas
