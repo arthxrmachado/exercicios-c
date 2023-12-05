@@ -17,48 +17,53 @@ Considere que, a cada execução do algoritmo, somente será calculado o valor r
 //importacao de bibliotecas
 #include <stdio.h>
 
-void main()
+int main ()
 {
-	int cod,q;
-	float valor;
 	
-	printf("Entre com o codigo do produto:\n");
-	scanf("%d",&cod);
-	printf("Entre com a quantidade do produto:\n");
-	scanf("%d",&q);
+	//variáveis
 	
-	if(cod==100)
-	{
-		valor=3.50*q;
-		printf("Codigo Escolhido: %d\n Quantidade: %d\n Valor do Produto:%.2f\n",cod,q,valor);
-	}else
-	if(cod==101)
-	{
-		valor=4.50*q;
-		printf("Codigo Escolhido: %d\n Quantidade: %d\n Valor do Produto:%.2f\n",cod,q,valor);
-	}else
-	if(cod==102)
-{
-		valor=5.20*q;
-		printf("Codigo Escolhido: %d\n Quantidade: %d\n Valor do Produto:%.2f\n",cod,q,valor);
-	}else
-	if(cod==103)
-	{
-		valor=3.00*q;
-		printf("Codigo Escolhido: %d\n Quantidade: %d\n Valor do Produto:%.2f\n",cod,q,valor);
-	}else
-	if(cod==104)
-	{
-		valor=4.00*q;
-		printf("Codigo Escolhido: %d\n Quantidade: %d\n Valor do Produto:%.2f\n",cod,q,valor);
-	}else
-	if(cod==105)
-	{
-		valor=2.50*q;
-		printf("Codigo Escolhido: %d\n Quantidade: %d\n Valor do Produto:%.2f\n",cod,q,valor);
-	}else
-
-	{
-		printf("O codigo digitado e invalido. Reinicie o programa e tente novamente o seu pedido!");
+	int pedido, quantidade;
+	float preco;
+	
+	//corpo do programa
+	
+	printf("100 - Cachorro-quente: 3.50\n101 - Bauru simples: 4.50\n102 - Bauru com ovo: 5.20\n103 - Hamburguer: 3.00\n104 - Cheeseburger: 4.00\n105 - Refrigerante: 2.50");
+	
+	printf("\n\nEscreva o codigo do pedido: ");
+	scanf("%i" , &pedido);
+	
+	printf("\nEscreva a quantidade: ");
+	scanf("%i" ,  &quantidade);
+	
+	if(pedido==100){
+		preco=3.50*quantidade;
+		printf("O preco a ser pago e: %0.2f" , preco);
+	} else {
+		if(pedido==101){
+			preco=4.50*quantidade;
+			printf("O preco a ser pago e: %0.2f" , preco);
+		} else {
+			if(pedido==102){
+				preco=5.20*quantidade;
+				printf("O preco a ser pago e: %0.2f" , preco);
+			} else {
+				if(pedido==103){
+					preco=3.00*quantidade;
+					printf("O preco a ser pago e: %0.2f" , preco);
+				} else {
+					if(pedido==104){
+						preco=4.00*quantidade;
+						printf("O preco a ser pago e: %0.2f" , preco);
+					} else {
+						if(pedido==105){
+							preco=2.50*quantidade;
+							printf("O preco a ser pago e: %0.2f" , preco);
+						}
+					}
+				}
+			}
+		}
 	}
+	
+
 }
