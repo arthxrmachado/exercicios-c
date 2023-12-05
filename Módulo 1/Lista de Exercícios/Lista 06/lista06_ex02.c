@@ -1,23 +1,16 @@
 /*
-   FAC - Turma B
-   
-   Lista de ExercÌcios VI
-   
-   QUEST√O 02: Um fazendeiro realizou um tratamento sobre sua 
-   plantaÁ„o de cafÈ que gerou um crescimento constante de C % 
-   em sua produÁ„o, por ano. Considerando que atualmente sua 
-   produÁ„o anual seja de M u.p., implementar um programa que 
-   determine a quantidade de anos necess·ria para que a produÁ„o 
-   duplique.
+QUEST√ÉO 02: Um fazendeiro realizou um tratamento sobre sua planta√ß√£o de caf√© que gerou um crescimento constante de C % em sua produ√ß√£o, por ano. 
+Considerando que atualmente sua produ√ß√£o anual seja de M u.p., implementar um programa que determine a quantidade de anos necess√°ria para que a produ√ß√£o 
+duplique.
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
 //main
 void main ()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int anos = 0;
 	float m, c, prod;
 	
