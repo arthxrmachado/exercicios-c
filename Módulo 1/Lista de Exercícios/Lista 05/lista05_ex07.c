@@ -1,26 +1,21 @@
 /*
-   FAC - Turma B
-   Data: 17/09/2020
-   
-   Lista V:
-   
-   QUESTÃO 07: Faça um programa que leia 150 números reais e, ao final, exiba:
+QUESTÃƒO 07: FaÃ§a um programa que leia 150 nÃºmeros reais e, ao final, exiba:
    
    a)	A soma dos 50 primeiros;
-   b)	menor número do 51° ao 100° valores fornecidos;
-   c)	A média entre os últimos 50 valores.
+   b)	menor nÃºmero do 51Â° ao 100Â° valores fornecidos;
+   c)	A mÃ©dia entre os Ãºltimos 50 valores.
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//declaração de constantes
+//declaraÃ§Ã£o de constantes
 #define QUANT 150
 
 //main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i;
 	float valor, somaG1 = 0, somaG3 = 0, mediaG3, menor = 99999;
 	
@@ -30,14 +25,14 @@ void main ()
 		printf ("%do. valor: ", i);
 		scanf ("%f", &valor);
 		
-		//verificando se está no primeiro grupo
+		//verificando se estÃ¡ no primeiro grupo
 		if (i <= QUANT/3)
 		{
 			somaG1 += valor;
 		}
 		else
 		{
-			//verificando se está no segundo grupo
+			//verificando se estÃ¡ no segundo grupo
 			if (i <= 2*(QUANT/3))
 			{
 				if (valor < menor)
@@ -45,7 +40,7 @@ void main ()
 					menor = valor;
 				}
 			}
-			else  //está no terceiro grupo
+			else  //estÃ¡ no terceiro grupo
 			{
 				somaG3 += valor;
 			}
