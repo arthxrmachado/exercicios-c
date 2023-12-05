@@ -1,15 +1,18 @@
-/*QUEST√O 03: Jo„ozinho investiu Q reais em uma aplicaÁ„o com rendimento fixo de R% ao mÍs. Pede-se a implementaÁ„o de um programa que calcule o valor (e exiba-o) disponÌvel na conta de Jo„ozinho apÛs A anos de investimento.*/
+/*
+QUEST√ÉO 03: Jo√£ozinho investiu Q reais em uma aplica√ß√£o com rendimento fixo de R% ao m√™s. Pede-se a implementa√ß√£o de um programa que calcule o valor 
+(e exiba-o) dispon√≠vel na conta de Jo√£ozinho ap√≥s A anos de investimento.
+*/
 
 #include <stdio.h>
 
 void main (){
 	
-	//vari·veis
+	//vari√°veis
 	
 	int a, i;
 	float q, r;
 	
-	//informaÁıes
+	//informa√ß√µes
 	
 	printf("Qual o valor investido? ");
 	scanf("%f" , &q);
