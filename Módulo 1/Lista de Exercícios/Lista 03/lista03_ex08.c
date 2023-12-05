@@ -1,40 +1,35 @@
 /*
-	FAC - Turma B - 03/09/2020
-	
-    QUEST√O 08: Em uma empresa deseja-se fazer um levantamento 
-	sobre algumas informaÁıes dos seus 250 funcion·rios. 
-	Cada funcion·rio dever· responder um question·rio ao qual 
-	informar· os seguintes dados: matrÌcula, gÍnero, idade, 
-	sal·rio e tempo (em anos) de trabalho na empresa. 
-	A execuÁ„o do programa deve exibir os seguintes itens:
+QUEST√ÉO 08: Em uma empresa deseja-se fazer um levantamento sobre algumas informa√ß√µes dos seus 250 funcion√°rios. Cada funcion√°rio dever√° responder um 
+question√°rio ao qual informar√° os seguintes dados: matr√≠cula, g√™nero, idade, sal√°rio e tempo (em anos) de trabalho na empresa. 
 
-    a) Quantidade de funcion·rios que ingressaram na empresa 
-	   com menos de 21 anos;
-    b) Quantidade de funcion·rios do gÍnero feminino;
-    c) MÈdia salarial dos homens;
-    d) MatrÌcula dos funcion·rios mais antigo e mais novo.
+A execu√ß√£o do programa deve exibir os seguintes itens:
+
+    a) Quantidade de funcion√°rios que ingressaram na empresa com menos de 21 anos;
+    b) Quantidade de funcion√°rios do g√™nero feminino;
+    c) M√©dia salarial dos homens;
+    d) Matr√≠cula dos funcion√°rios mais antigo e mais novo.
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
-//declaraÁ„o de constantes
+//declara√ß√£o de constantes
 #define QUANT 3
 
 //main
 void main ()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i, mat, tempo, idade, cont21 = 0, 
 	    contF = 0, contM = 0, maiorTempo = 0,
 		menorTempo = 100, matMaiorTempo, matMenorTempo;
 	char genero;
 	float salario, somaSalM = 0, mediaSalM;
 	
-	//variando os 250 funcion·rios da empresa
+	//variando os 250 funcion√°rios da empresa
 	for (i=0;i<QUANT;i++)
 	{
-		//lendo os dados de cada funcion·rio
+		//lendo os dados de cada funcion√°rio
 		printf ("Matricula: ");
 		scanf ("%d", &mat);
 		
@@ -52,33 +47,33 @@ void main ()
 		printf ("Tempo (em anos) de trabalho na empresa: ");
 		scanf ("%d", &tempo); 		
 		
-		//Quantidade de funcion·rios que ingressaram na empresa 
+		//Quantidade de funcion√°rios que ingressaram na empresa 
 		//com menos de 21 anos
 		if ((idade - tempo) < 21)
 		{
 			cont21++;
 		}
 		
-		//Quantidade de funcion·rios do gÍnero feminino
+		//Quantidade de funcion√°rios do g√™nero feminino
 		if (genero == 'F')
 		{
 			contF++;
 		}
 		else
 		{
-			//calculando a soma dos sal·rios dos homens
+			//calculando a soma dos sal√°rios dos homens
 			somaSalM = somaSalM + salario;  //somaSalM += salario;
 			contM++;
 		}
 		
-		//MatrÌcula do funcion·rio mais antigo na empresa
+		//Matr√≠cula do funcion√°rio mais antigo na empresa
 		if (tempo > maiorTempo)
 		{
 			maiorTempo = tempo;
 			matMaiorTempo = mat;
 		}
 		
-		//MatrÌcula do funcion·rio que est· h· menos tempo na empresa
+		//Matr√≠cula do funcion√°rio que est√° h√° menos tempo na empresa
 		if (tempo < menorTempo)
 		{
 			menorTempo = tempo;
@@ -86,12 +81,12 @@ void main ()
 		}
 	}
 	
-	//calculando a mÈdia de sal·rio dos homens
+	//calculando a m√©dia de sal√°rio dos homens
 	mediaSalM = somaSalM/contM;
 	
 	//Exibindo os resultados
-	printf ("\n\nQuantidade de funcion·rios que ingressaram com menos de 21 anos: %d\n", cont21);
-	printf ("Quantidade de funcion·rios do gÍnero feminino: %d\n", contF);
+	printf ("\n\nQuantidade de funcion√°rios que ingressaram com menos de 21 anos: %d\n", cont21);
+	printf ("Quantidade de funcion√°rios do g√™nero feminino: %d\n", contF);
 	printf ("Media salarial dos homens: R$ %.2f\n", mediaSalM);
 	printf ("Funcionario mais antigo da empresa: %d\n", matMaiorTempo);    
 	printf ("Funcionario mais novo na empresa: %d\n", matMenorTempo);
