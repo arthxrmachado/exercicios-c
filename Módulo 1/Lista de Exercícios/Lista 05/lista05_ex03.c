@@ -1,17 +1,14 @@
-/* Lista V
-
-   QUEST√O 03: 
-   Implementar um programa que calcule o valor de base elevevado a expoente, onde base e 
-   expoente s„o n˙meros inteiros dados pelo usu·rio.
+/*
+QUEST√ÉO 03: Implementar um programa que calcule o valor de base elevevado a expoente, onde base e expoente s√£o n√∫meros inteiros dados pelo usu√°rio.
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
 //main
 void main ()
 {
-	//DeclaraÁ„o de vari·veis
+	//Declara√ß√£o de vari√°veis
 	int base, expoente, potencia, i;
 	 
 	//leitura dos valores de entrada
@@ -21,14 +18,14 @@ void main ()
 	printf ("Entre com o expoente: ");
 	scanf ("%d", &expoente);
 	
-	/* A soluÁ„o consistir· em calcular o produto base x base x ... x base, sendo o n˙mero
-	   destas multiplicaÁıes representado por expoente.
+	/* A solu√ß√£o consistir√° em calcular o produto base x base x ... x base, sendo o n√∫mero
+	   destas multiplica√ß√µes representado por expoente.
 	   
-	   Exemplo: para calcular 3 elevado a 5, ser· necess·rio multiplicar o n˙mero 3 por
+	   Exemplo: para calcular 3 elevado a 5, ser√° necess√°rio multiplicar o n√∫mero 3 por
 	            5 vezes. Ou seja: 3x3x3x3x3  
 	*/
 	
-	potencia = 1;  //elemento neutro da multiplicaÁ„o
+	potencia = 1;  //elemento neutro da multiplica√ß√£o
 	
 	//calculando o valor da potencia
 	for (i=1;i<=expoente;i++)
