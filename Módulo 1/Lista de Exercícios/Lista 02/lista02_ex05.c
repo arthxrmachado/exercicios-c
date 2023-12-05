@@ -1,21 +1,20 @@
-/*QUESTÃO 05: O cardápio de uma lanchonete é o seguinte:
+/*
+QUESTAO 05: O cardapio de uma lanchonete e o seguinte:
 
-Especificação 		Código 	Preço
+EspecificaÃ§Ã£o 		CÃ³digo 	PreÃ§o
 Cachorro quente 	100 	3,50
 Bauru simples 		101 	4,50
 Bauru com ovo 		102 	5,20
-Hamburger 			103 	3,00
+Hamburger 		103 	3,00
 Cheeseburger 		104 	4,00
 Refrigerante 		105 	2,50
 
-Escrever um algoritmo que obtenha o código do item pedido, a quantidade e calcule o valor
-a ser pago.
+Escrever um algoritmo que obtenha o cÃ³digo do item pedido, a quantidade e calcule o valor a ser pago.
 
-Considere que, a cada execução do algoritmo, somente será calculado o valor relacionado a
-um item.
+Considere que, a cada execuÃ§Ã£o do algoritmo, somente serÃ¡ calculado o valor relacionado a um item.
 */
 
-//Importação de bibliotecas
+//importacao de bibliotecas
 #include <stdio.h>
 
 void main()
