@@ -1,14 +1,16 @@
+/*
+QUESTÃO 07: Após o usuário escrever o preço do produto, o programa retorna o preço com 10% de desconto, parcelado em 5x e parcelado em 10x com juros de 20%.
+*/
+
 #include<stdio.h>
 
 int main()
 {
 	
-	//vari�veis
-	
+	//variáveis
 	float preco, preco_desconto, preco_parcelado, preco_juros;
 	
 	//corpo do programa
-	
 	printf("Escreva o preco do produto: ");
 	scanf("%f" , &preco);
 	
