@@ -1,32 +1,26 @@
 /*
-	FAC - Turma B - 03/09/2020
-	
-    QUESTÃO 07: Uma determinada empresa fez uma pesquisa de 
-	mercado para saber se as pessoas gostaram ou não de um 
-	novo produto que foi lançado. Para cada pessoa 
-	entrevistada foram coletados os seguintes dados: 
-	gênero (M ou F) e resposta (G [Gostou] ou N [Não Gostou]). 
-	Sabendo-se que foram entrevistadas X pessoas, faça um 
-	programa que forneça:
+QUESTÃƒO 07: Uma determinada empresa fez uma pesquisa de mercado para saber se as pessoas gostaram ou nÃ£o de um novo produto que foi lanÃ§ado. Para cada pessoa 
+entrevistada foram coletados os seguintes dados: gÃªnero (M ou F) e resposta (G [Gostou] ou N [NÃ£o Gostou]). 
 
-	a)	Número de pessoas que gostaram do produto;
-	b)	Número de pessoas que não gostaram do produto;
-	c)	Informação dizendo em que gênero o produto teve uma 
-	    melhor aceitação.
+Sabendo-se que foram entrevistadas X pessoas, faÃ§a um programa que forneÃ§a:
+
+	a)	NÃºmero de pessoas que gostaram do produto;
+	b)	NÃºmero de pessoas que nÃ£o gostaram do produto;
+	c)	InformaÃ§Ã£o dizendo em que gÃªnero o produto teve uma melhor aceitaÃ§Ã£o.
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
 //main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int x, i, contG = 0, contNG = 0, contF = 0, contM = 0, contFG = 0, contMG = 0;
 	char genero, opiniao;
 	float percF, percM;
 	
-	//lendo o número de entrevistados
+	//lendo o nÃºmero de entrevistados
 	printf ("Quantas pessoas foram entrevistadas? ");
 	scanf ("%d", &x);
 	
@@ -75,7 +69,7 @@ void main ()
 		}
 	}
 	
-	//calculando os percentuais de aceitação
+	//calculando os percentuais de aceitaÃ§Ã£o
 	percF = ((float)contFG/contF)*100;    //casting
 	percM = ((float)contMG/contM)*100;
 	
@@ -85,17 +79,17 @@ void main ()
 	
 	if (percF > percM)
 	{
-		printf ("O produto teve maior aceitação entre as mulheres.");
+		printf ("O produto teve maior aceitaÃ§Ã£o entre as mulheres.");
 	}
 	else
 	{
 		if (percF < percM)
 		{
-			printf ("O produto teve maior aceitação entre os homens.");
+			printf ("O produto teve maior aceitaÃ§Ã£o entre os homens.");
 		}
 		else
 		{
-			printf ("O produto teve a mesma aceitação entre os generos.");
+			printf ("O produto teve a mesma aceitaÃ§Ã£o entre os generos.");
 		}
 	}
 }
