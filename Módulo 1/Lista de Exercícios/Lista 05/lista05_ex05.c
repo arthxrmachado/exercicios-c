@@ -1,13 +1,7 @@
 /*
-   FAC - Turma B
-   Data: 17/09/2020
+QUEST√ÉO 05: Elabore um programa que calcule a m√©dia ponderada de n elementos.
    
-   Lista V:
-   
-   QUEST√O 05: Elabore um programa que calcule a mÈdia ponderada de n elementos.
-   
-   ObservaÁ„o: na mÈdia ponderada, cada elemento possui um peso que representa a sua 
-   contribuiÁ„o no c·lculo da mÈdia final.
+Observa√ß√£o: na m√©dia ponderada, cada elemento possui um peso que representa a sua contribui√ß√£o no c√°lculo da m√©dia final.
    
    			
    v1	8	peso: 1
@@ -17,20 +11,19 @@
 		MP = (8x1) + (5x4) + (15x2)    58   
 		     ---------------------- =  --- = 8.29
 		            1+4+2               7
-
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
 //main
 void main ()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i, n;
 	float valor, peso, num = 0, den = 0, media;
 	
-	//lendo o numeros de valores a serem tratados no c·lculo da mÈdia
+	//lendo o numeros de valores a serem tratados no c√°lculo da m√©dia
 	printf ("Quantos numeros comporao a media? ");
 	scanf ("%d", &n);
 	
@@ -48,7 +41,7 @@ void main ()
 		den += peso;
 	}
 	
-	//calculando o valor da mÈdia
+	//calculando o valor da m√©dia
 	media = num/den;
 	
 	//exibindo o resultado
