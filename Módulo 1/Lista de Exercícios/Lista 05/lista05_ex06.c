@@ -1,34 +1,28 @@
 /*
-   FAC - Turma B
-   Data: 17/09/2020
+QUESTÃƒO 06: FaÃ§a um programa que leia 200 nÃºmeros inteiros. Ao final, exibir:
    
-   Lista V:
+   a) O maior nÃºmero fornecido, de ordem par (isto Ã©, o maior dentre o segundo, quarto, sexto, oitavo, etc valores fornecidos).
+   b) A mÃ©dia dos valores pares.
    
-   QUESTÃO 06: Faça um programa que leia 200 números inteiros. Ao final, exibir:
-   
-   a) O maior número fornecido, de ordem par (isto é, o maior dentre o segundo, quarto, 
-   sexto, oitavo, etc valores fornecidos).
-   b) A média dos valores pares.
-   
-   Exemplo: (10 números)
+   Exemplo: (10 nÃºmeros)
    
    			Valores=>	1   5   4   2   6   9   10  5  3  7
    			ordem=>		1   2   3   4   5   6   7   8  9  10 
    			
    			a. maior entre: 5, 2, 9, 5, 7 ==> Resposta = 9
-   			b. média dos valores pares:  (4 + 2 + 6 + 10)/4
+   			b. mÃ©dia dos valores pares:  (4 + 2 + 6 + 10)/4
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//declaração de constantes
+//declaraÃ§Ã£o de constantes
 #define QUANT 200
 
 //main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i, valor, maior = -99999, somaP = 0, contP = 0;
 	float mediaP;
 	
@@ -38,7 +32,7 @@ void main ()
 		printf ("%do. valor: ", i);
 		scanf ("%d", &valor);
 		
-		//verificando se a ordem é par
+		//verificando se a ordem Ã© par
 		if (i % 2 == 0)
 		{
 			if (valor > maior)
@@ -47,7 +41,7 @@ void main ()
 			}			
 		}
 		
-		//verificando se o número é par
+		//verificando se o nÃºmero Ã© par
 		if (valor %2 == 0)
 		{
 			somaP += valor;
