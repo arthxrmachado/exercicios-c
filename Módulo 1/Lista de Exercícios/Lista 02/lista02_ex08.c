@@ -1,15 +1,18 @@
+/*
+QUESTÃO 08: O usuário escreve a distância da viagem, o número de quilômetros que o carro percorre por litro e o preço do combustível. Após isso, o programa
+retorna a quantidade de combustível consumido duranto a viagem e o custo total.
+*/
+
 #include<stdio.h>
 
 int main()
 {
 	
-	//vari�veis
-	
+	//variáveis
 	int percurso, litro_km, quantidade_combustivel;
 	float preco, custo_total;
 	
 	//corpo do programa
-	
 	printf("Escreva o percurso da viagem em km: ");
 	scanf("%i" , &percurso);
 	
