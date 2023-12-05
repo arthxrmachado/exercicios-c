@@ -1,4 +1,4 @@
-//Com base na data que o usário digitar, o programa retorna o dia exato do ano.
+// Com base na data que o usário digitar, o programa retorna o dia exato do ano.
 
 #include <stdio.h>
 
