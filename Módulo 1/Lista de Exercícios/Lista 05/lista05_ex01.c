@@ -1,21 +1,18 @@
-/* Lista V
-
-   QUEST√O 01:
-   FaÁa um programa que leia um n˙mero inteiro x e, em seguida, solicite ao usu·rio 
-   outros 50 valores inteiros. Ao final, o programa deve exibir o total de m˙ltiplos de 
-   x fornecidos. 
+/*
+QUEST√ÉO 01: Fa√ßa um programa que leia um n√∫mero inteiro x e, em seguida, solicite ao usu√°rio outros 50 valores inteiros. Ao final, o programa deve exibir o 
+total de m√∫ltiplos de x fornecidos.
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
-//declaraÁ„o de constantes
+//declara√ß√£o de constantes
 #define QUANT 50
 
 //main
 void main ()
 {
-	//DeclaraÁ„o de vari·veis
+	//Declara√ß√£o de vari√°veis
 	int i, x, valor, cont = 0;
 	
 	//leitura do valor de x
@@ -25,14 +22,14 @@ void main ()
 	//pulando uma linha
 	printf ("\n");
 	
-	//repetiÁ„o para a leitura dos QUANT valores
+	//repeti√ß√£o para a leitura dos QUANT valores
 	for (i=1;i<=QUANT;i++)
 	{
 		//leitura de cada valor
 		printf ("%do. valor: ", i);
 		scanf ("%d", &valor);
 		
-		//verificando se o n˙mero lido È m˙ltiplo de x
+		//verificando se o n√∫mero lido √© m√∫ltiplo de x
 		if (valor % x == 0)
 		{
 			//se for, deve-se atualizar o contador
