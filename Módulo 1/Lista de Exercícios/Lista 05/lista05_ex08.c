@@ -1,35 +1,18 @@
 /*
-   FAC - Turma B
-   Data: 17/09/2020
-   
-   Lista V:
-   
-   QUESTÃO 08: Faça um programa que leia um número real x e um número inteiro y. Em 
-   seguida, o programa deve ler 100 números reais e calcular quantos destes estão no 
-   intervalo definido por [x-y,x+y].
-   
-   Exemplo:
-   
-   			x = 10
-   			y = 3
-   			
-   			x-y=7
-   			x+y=13
-   			
-   			numeros: 4   8   9   10   7   2   6   14   12  0
-                         1   2   3    4                5
+QUESTÃƒO 08: FaÃ§a um programa que leia um nÃºmero real x e um nÃºmero inteiro y. Em seguida, o programa deve ler 100 nÃºmeros reais e calcular quantos destes 
+estÃ£o no intervalo definido por [x-y,x+y].
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//declaração de constantes
+//declaraÃ§Ã£o de constantes
 #define QUANT 100
 
 //main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	float x, valor, inicio, fim;
 	int y, i, cont = 0;
 	
@@ -52,7 +35,7 @@ void main ()
 		printf ("%do. valor: ", i);
 		scanf ("%f", &valor);
 		
-		//verificando se o valor está no intervalo
+		//verificando se o valor estÃ¡ no intervalo
 		if ((valor >= inicio) && (valor <= fim))
 		{
 			cont++;
