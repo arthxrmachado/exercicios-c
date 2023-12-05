@@ -1,4 +1,4 @@
-//Esse programa funciona como um caixa eletrônico, o usuário digita quanto deseja sacar e o programa retorna essa quantidade no número de notas possíveis.
+// Esse programa funciona como um caixa eletrônico, o usuário digita quanto deseja sacar e o programa retorna essa quantidade no número de notas possíveis.
 
 #include <stdio.h>
 
