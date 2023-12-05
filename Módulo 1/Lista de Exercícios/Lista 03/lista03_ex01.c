@@ -1,10 +1,12 @@
-/*QUEST√O 01: FaÁa um programa que leia um n˙mero inteiro positivo N e exiba todos os m˙ltiplos de Y inferiores a N, onde N e Y s„o fornecidos pelo usu·rio.*/
+/*
+QUEST√ÉO 01: Fa√ßa um programa que leia um n√∫mero inteiro positivo N e exiba todos os m√∫ltiplos de Y inferiores a N, onde N e Y s√£o fornecidos pelo usu√°rio.
+*/
 
 #include <stdio.h>
 
 void main (){
 	
-	//vari·veis
+	//vari√°veis
 	
 	int n, y, j, i, div;
 	
