@@ -1,32 +1,28 @@
 /*
-   FAC - Turma B
-   Data: 17/09/2020
-   
-   QUESTÃO 10:
-   Foi feita uma pesquisa entre os habitantes de uma região e coletados os dados de 
-   altura e gênero das pessoas. Faça um programa que leia as informações de 50 pessoas 
-   e informe:
+QUESTÃƒO 10: Foi feita uma pesquisa entre os habitantes de uma regiÃ£o e coletados os dados de altura e gÃªnero das pessoas. FaÃ§a um programa que leia as 
+informaÃ§Ãµes de 50 pessoas e informe:
+
  	- a maior e a menor alturas encontradas;
- 	- a média de altura das mulheres;
- 	- a média de altura da população;
- 	- o percentual de homens na população.	
+ 	- a mÃ©dia de altura das mulheres;
+ 	- a mÃ©dia de altura da populaÃ§Ã£o;
+ 	- o percentual de homens na populaÃ§Ã£o.	
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//definicação de constantes
+//definicaÃ§Ã£o de constantes
 #define Q 50
 
 //main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i, contF = 0, contM;
 	float altura, maior = 0, menor = 5, somaAlturaF = 0, somaAltura = 0, mediaAlturaF, mediaAltura, percM;
 	char genero;
 	
-	//lendo as informações dos Q habitantes
+	//lendo as informaÃ§Ãµes dos Q habitantes
 	for (i=1;i<=Q;i++)
 	{
 		printf ("Altura: ");
@@ -39,7 +35,7 @@ void main ()
 			scanf ("%c", &genero);
 			genero = toupper (genero);
 			
-			//validando o gênero informado
+			//validando o gÃªnero informado
 			if ((genero != 'F') && (genero != 'M'))
 			{
 				printf ("\tErro: opcao invalida! Tente novamente.\n");
@@ -59,21 +55,21 @@ void main ()
 			menor = altura;
 		}
 		
-		//calculos para se chegar à média de altura das mulheres
+		//calculos para se chegar Ã  mÃ©dia de altura das mulheres
 		if (genero == 'F')
 		{
 			somaAlturaF += altura;
 			contF++;	
 		}	
 		
-		//somando todas as alturas para depois calcular a média
+		//somando todas as alturas para depois calcular a mÃ©dia
 		somaAltura += altura;	
 	}
 	
-	//calculando a média de altura das mulheres
+	//calculando a mÃ©dia de altura das mulheres
 	mediaAlturaF = somaAlturaF/contF;
 	
-	//calculando a média de altura de todos os habitantes
+	//calculando a mÃ©dia de altura de todos os habitantes
 	mediaAltura = somaAltura/Q;
 	
 	//calculando o percentual de homens
