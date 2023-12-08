@@ -1,34 +1,28 @@
 /*
-	FAC - 2020/1
-	Lista de Exercícios VII
-	
-	Questão 01:
-	
-	Dados três números inteiros a, b e c, implementar um programa que exiba os números do 
-	intervalo definido por a e b (sempre começando em a e terminando em b), com exceção 
-	daqueles que sejam múltiplos de c.
+QuestÃ£o 01: Dados trÃªs nÃºmeros inteiros a, b e c, implementar um programa que exiba os nÃºmeros do intervalo definido por a e b (sempre comeÃ§ando em a e 
+terminando em b), com exceÃ§Ã£o daqueles que sejam mÃºltiplos de c.
 
 	Exemplos:
 
 	a = 10, b = 20, c = 3
-		Saída: 10, 11, 13, 14, 16, 17, 19, 20 
+		SaÃ­da: 10, 11, 13, 14, 16, 17, 19, 20 
 		
 	a = 25, b = 18, c = 5
-		Saída: 24, 23, 22, 21, 19, 18
+		SaÃ­da: 24, 23, 22, 21, 19, 18
 
-	Nota: devem ser apresentadas três versões do programa, uma para cada estrutura de 
-	repetição estudada.
+	Nota: devem ser apresentadas trÃªs versÃµes do programa, uma para cada estrutura de 
+	repetiÃ§Ã£o estudada.
 	
-	VERSÃO 2: WHILE
+	VERSÃƒO 1: WHILE
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
 //main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int a, b, c, i;
 	
 	//leitura dos dados de entrada
