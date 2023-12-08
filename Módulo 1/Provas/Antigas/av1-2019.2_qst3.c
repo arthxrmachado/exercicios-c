@@ -1,23 +1,17 @@
 /*
-   FAC - Turma B
-   
-   AV1 aplicada em 2019/2
-   
-   Questão 03 [2,5 pontos]:
-   Desenvolver um programa que leia um número inteiro (no 
-   intervalo de 1 a 2000) e exiba o número romano equivalente.
+QuestÃ£o 03: Desenvolver um programa que leia um nÃºmero inteiro (no intervalo de 1 a 2000) e exiba o nÃºmero romano equivalente.
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
 //main
 void main ()
 {
-	//Declaração de variáveis
+	//DeclaraÃ§Ã£o de variÃ¡veis
 	int numero, resto, m, c, d, u;	
 	
-	//lendo o número
+	//lendo o nÃºmero
 	do
 	{
 		printf ("Entre com um numero (de 1 a 2000): ");
@@ -30,7 +24,7 @@ void main ()
 	}
 	while ((numero < 1) || (numero > 2000));
 	
-	//decompondo o número em milhares, centenas, dezenas e unidades
+	//decompondo o nÃºmero em milhares, centenas, dezenas e unidades
 	m = numero/1000;
 	resto = numero%1000;
 	
