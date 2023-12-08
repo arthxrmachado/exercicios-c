@@ -1,26 +1,17 @@
 /*
-   FAC - Turma B
-   Professor Leonardo Vianna
-   Data: 19/11/2020
-   
-   Lista de Exercícios X
-   
-   QUESTÃO 09:
-   Implementar a função de inserção de determinado elemento em um 
-   vetor ordenado crescentemente (dica: utilizar a função do item 
-   08 para auxiliar).
+QUESTÃƒO 09: Implementar a funÃ§Ã£o de inserÃ§Ã£o de determinado elemento em um vetor ordenado crescentemente (dica: utilizar a funÃ§Ã£o do item 08 para auxiliar).
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//declaração de constantes
+//declaraÃ§Ã£o de constantes
 #define CAP 5
 
 #define TRUE 1
 #define FALSE 0
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 void exibirVetor (float v[], int tamanho);
 int buscar (float v[], int quantidade, float numero);
 int inserir (float v[], int *quantidade, int capacidade, float numero);
@@ -28,7 +19,7 @@ int inserir (float v[], int *quantidade, int capacidade, float numero);
 //main
 void main()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	float vetor[CAP];
 	float num;
 	int retorno, quant=0;
@@ -39,11 +30,11 @@ void main()
 	    //exibindo o vetor antes da busca
 		exibirVetor (vetor, quant);	
 		
-		//obtendo o número a ser inserido
+		//obtendo o nÃºmero a ser inserido
 		printf ("\nEntre com o numero a ser inserido: ");
 		scanf ("%f", &num);
 		
-		//chamando a função inserir
+		//chamando a funÃ§Ã£o inserir
 		retorno = inserir (vetor, &quant, CAP, num);
 		
 		//testando o retorno
@@ -53,10 +44,10 @@ void main()
 		}
 		else
 		{
-			printf ("\n\nERRO: não ha mais espaco para insercao!\n");
+			printf ("\n\nERRO: nÃ£o ha mais espaco para insercao!\n");
 		}
 		
-		//verificando se o usuário deseja continuar
+		//verificando se o usuÃ¡rio deseja continuar
 		printf ("\nDeseja continuar [S/N]? ");
 		fflush (stdin);
 		scanf ("%c", &resp);
@@ -65,15 +56,15 @@ void main()
 	while (resp == 'S');
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 
 //exibe na tela os elementos de um vetor com 'tamanho' elementos
 void exibirVetor (float v[], int tamanho)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i;	
 	
-	//verirficando se o vetor está vazio
+	//verirficando se o vetor estÃ¡ vazio
 	if (tamanho == 0)
 	{
 		printf ("\nNenhum elemento no vetor!\n");
@@ -93,7 +84,7 @@ void exibirVetor (float v[], int tamanho)
 
 int buscar (float v[], int quantidade, float numero)
 {
-	//declaração de variáveis;
+	//declaraÃ§Ã£o de variÃ¡veis;
 	int i;
 	
 	//varrendo o vetor em busca do elemento
@@ -118,32 +109,32 @@ int buscar (float v[], int quantidade, float numero)
 		}
 	}
 	
-	//retornando a posição, caso o número seja maior do que todos no vetor
+	//retornando a posiÃ§Ã£o, caso o nÃºmero seja maior do que todos no vetor
 	return quantidade; //ou return i;
 }
 
 int inserir (float v[], int *quantidade, int capacidade, float numero)
 {	
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i, posicao;
 
-	//verificando se o vetor está cheio
+	//verificando se o vetor estÃ¡ cheio
 	if (*quantidade == capacidade)
 	{
 		return FALSE;
 	}	
 	else
 	{
-		//verificando a posição na qual o número deve ser inserido
+		//verificando a posiÃ§Ã£o na qual o nÃºmero deve ser inserido
 		posicao = buscar (v, *quantidade, numero);
 		
-		//deslocando para a direita os elementos que estão nas posições 'pos' ao final
+		//deslocando para a direita os elementos que estÃ£o nas posiÃ§Ãµes 'pos' ao final
 		for (i=(*quantidade)-1;i>=posicao;i--)
 		{
 			v[i+1] = v[i];
 		}
 		
-		//inserindo o número em 'posicao'
+		//inserindo o nÃºmero em 'posicao'
 		v[posicao] = numero;
 		
 		//atualizando a quantidade de elementos no vetor
