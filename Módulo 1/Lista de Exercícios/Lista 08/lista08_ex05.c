@@ -1,40 +1,18 @@
 /*
-   FAC - Turma B - 2020/1
-   Professor Leonardo Vianna
-   
-   Lista de ExercÌcios VIII (FunÁıes):
-   
-   QUEST√O 05:
-   Fazer uma funÁ„o que calcule o MMC (mÌnimo m˙ltiplo comum) 
-   entre dois n˙meros.
-
-   						________
-   				  A	-->	|      | --> mmc
-   				  B	-->	|______|
-
-   						________
-   				  4 -->	|      | --> 12
-   				  6 -->	|______|
-
-		   *        *	
-    4: 4 8 12 16 20 24 ...
-    6: 6 12 18 24 30 ...
-    
-    mmc (3,15): 15 
-    mmc (7,9):  63 (7*9)
+QUEST√ÉO 05: Fazer uma fun√ß√£o que calcule o MMC (m√≠nimo m√∫ltiplo comum) entre dois n√∫meros.
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
-//protÛtipos das funÁıes
+//prot√≥tipos das fun√ß√µes
 int mmc (int a, int b);
 int calculaMaior (int num1, int num2);
 
 //main
 void main ()
 {	
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int n1, n2;
 	
 	//lendo os valores de entrada
@@ -45,7 +23,7 @@ void main ()
 	printf ("MMC(%d,%d) = %d\n", n1, n2, mmc (n1,n2));		
 }
 
-//implementaÁ„o das funÁıes
+//implementa√ß√£o das fun√ß√µes
 int calculaMaior (int num1, int num2)
 {
 	return (num1>num2)?num1:num2;
@@ -53,14 +31,14 @@ int calculaMaior (int num1, int num2)
 
 int mmc (int a, int b)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int maior, i;
 	
 	maior = calculaMaior(a,b);
 	
 	for (i=maior;i<=a*b;i++)
 	{
-		//verificando se 'i' È m˙ltiplo dos dois valores (ou seja, se È um m˙ltiplo comum)
+		//verificando se 'i' √© m√∫ltiplo dos dois valores (ou seja, se √© um m√∫ltiplo comum)
 		if ((i%a==0) && (i%b==0))
 		{
 			return i;
