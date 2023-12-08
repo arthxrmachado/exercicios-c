@@ -1,10 +1,6 @@
 /*
-	FAC - 2020/1
-	Lista de Exercícios VII
-	
-	Questão 02:
-	Construir um programa que, dado um número inteiro n fornecido pelo usuário, exiba uma 
-	sequência de elementos, distribuídos em linhas, como nos exemplos a seguir:
+QuestÃ£o 02: Construir um programa que, dado um nÃºmero inteiro n fornecido pelo usuÃ¡rio, exiba uma sequÃªncia de elementos, distribuÃ­dos em linhas, como nos 
+exemplos a seguir:
 
 	Exemplos:
 
@@ -26,36 +22,36 @@
 	4	3	2	1
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
 //main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int n, i, j, k;
 	
 	//leitura do valor de N
 	printf ("Entre com um numero inteiro positivo: ");
 	scanf ("%d", &n);
 	
-	//exibindo conforme disposição apresentada no enunciado
-	for (i=1;i<=n;i++)  //este for controlará o número de linhas que serão exibidas
+	//exibindo conforme disposiÃ§Ã£o apresentada no enunciado
+	for (i=1;i<=n;i++)  //este for controlarÃ¡ o nÃºmero de linhas que serÃ£o exibidas
 	{
-		//o primeiro for exibirá os elementos de i até 1
-		//Isto é: se estiver na terceira linha, exibirá  3  2  1
+		//o primeiro for exibirÃ¡ os elementos de i atÃ© 1
+		//Isto Ã©: se estiver na terceira linha, exibirÃ¡  3  2  1
 		for (j=i;j>=1;j--)
 		{
 			printf ("%d  ", j);
 		}
 		
-		//este segundo for "completará" a linha com zeros
+		//este segundo for "completarÃ¡" a linha com zeros
 		for (k=i+1;k<=n;k++)
 		{
 			printf ("0  ");
 		}
 
-		//pulando para a próxima linha		
+		//pulando para a prÃ³xima linha		
 		printf ("\n");
 	}
 }
