@@ -1,24 +1,17 @@
 /*
-   FAC - Turma B - 2020/1
-   Professor Leonardo Vianna
-   
-   Lista de Exercícios VIII (Funções):
-   
-   QUESTÃO 09:
-   Implementar uma função que, dado um número inteiro, calcule 
-   (e retorne) a soma e a média de seus divisores.
+QUESTÃƒO 09: Implementar uma funÃ§Ã£o que, dado um nÃºmero inteiro, calcule (e retorne) a soma e a mÃ©dia de seus divisores.
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 void calcularSomaMedia (int n, int *soma, float *media);
 
 //main
 void main ()
 {	
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int numero, sum;
 	float avg;
 	
@@ -26,24 +19,24 @@ void main ()
 	printf ("Entre com um numero: ");
 	scanf ("%d", &numero);
 	
-	//chamando a função
+	//chamando a funÃ§Ã£o
 	calcularSomaMedia (numero, &sum, &avg);
 	
 	//exibindo os resultados
 	printf ("Soma = %d\nMedia = %.1f\n", sum, avg);
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 void calcularSomaMedia (int n, int *soma, float *media)
 {
-	//declarando variáveis
+	//declarando variÃ¡veis
 	int i, s=0, cont=0;
 	float m;
 	
 	//calculando os divisores de n
 	for (i=1;i<=n;i++)
 	{
-		//verificando se 'i' é divisor de 'n'
+		//verificando se 'i' Ã© divisor de 'n'
 		if (n%i==0)
 		{
 			s += i;
@@ -51,10 +44,10 @@ void calcularSomaMedia (int n, int *soma, float *media)
 		}
 	}
 	
-	//calculando a média
+	//calculando a mÃ©dia
 	m = (float)s/cont;
 	
-	//atribuindo os resultados aos parâmetros de saída
+	//atribuindo os resultados aos parÃ¢metros de saÃ­da
 	*soma = s;
 	*media = m;
 }
