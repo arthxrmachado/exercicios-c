@@ -1,19 +1,14 @@
 /*
+QUEST√ÉO 04: A fun√ß√£o logar√≠tmica √© complementar √† potencia√ß√£o. Ou seja, uma vez que 3^4 = 81, podemos ent√£o afirmar que log 3 81 = 4. Generalizando, temos 
+que: base^expoente = pot <-> log base pot = expoente. 
 
-	Lista de ExercÌcios - IX
-	
-	QUEST√O 04: A funÁ„o logarÌtmica È complementar ‡ potenciaÁ„o. 
-	Ou seja, uma vez que 3^4 = 81, podemos ent„o afirmar que log 3 81 = 4. 
-	Generalizando, temos que: base^expoente = pot <-> log base pot = expoente. 
-	Com base nessa descriÁ„o, pede-se o desenvolvimento de uma funÁ„o que, dados a e b, 
-	calcule o valor de log a b. Nota: a sua soluÁ„o dever· apresentar um valor inteiro que, 
-	na verdade, ser· a soluÁ„o aproximada do logaritmo.
-
+Com base nessa descri√ß√£o, pede-se o desenvolvimento de uma fun√ß√£o que, dados a e b, calcule o valor de log a b. Nota: a sua solu√ß√£o dever√° apresentar um 
+valor inteiro que, na verdade, ser√° a solu√ß√£o aproximada do logaritmo.
 */
 
 #include <stdio.h>
 
-//protÛtipo das funÁıes
+//prot√≥tipo das fun√ß√µes
 
 void exibirLog (int a, int b);
 
@@ -21,7 +16,7 @@ void exibirLog (int a, int b);
 
 void main(){
 	
-	//vari·veis
+	//vari√°veis
 	
 	int a, b;
 	
@@ -37,11 +32,11 @@ void main(){
 	
 }
 
-//implementaÁ„o das funÁıes
+//implementa√ß√£o das fun√ß√µes
 
 void exibirLog (int a, int b){
 	
-	//vari·veis
+	//vari√°veis
 	
 	int cont, valor=b;
 	
