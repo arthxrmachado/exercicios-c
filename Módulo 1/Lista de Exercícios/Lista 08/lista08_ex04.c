@@ -1,39 +1,18 @@
 /*
-   FAC - Turma B - 2020/1
-   Professor Leonardo Vianna
-   
-   Lista de ExercÌcios VIII (FunÁıes):
-   
-   QUEST√O 04:
-   Fazer uma funÁ„o que calcule o MDC (m·ximo divisor comum) 
-   entre dois n˙meros.
-   						________
-   				  A	-->	|      | --> mdc
-   				  B	-->	|______|
-
-   						________
-   				  10-->	|      | --> 5
-   				  15-->	|______|
-
-        *   *  
-    10: 1 2 5 10
-    15: 1 3 5 15
-    
-    mdc (3,10): 1
-    mdc (5,20): 5
+QUEST√ÉO 04: Fazer uma fun√ß√£o que calcule o MDC (m√°ximo divisor comum) entre dois n√∫meros.
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
-//protÛtipos das funÁıes
+//prot√≥tipos das fun√ß√µes
 int mdc (int a, int b);
 int calculaMenor (int num1, int num2);
 
 //main
 void main ()
 {	
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int n1, n2;
 	
 	//lendo os valores de entrada
@@ -44,7 +23,7 @@ void main ()
 	printf ("MDC(%d,%d) = %d\n", n1, n2, mdc (n1,n2));		
 }
 
-//implementaÁ„o das funÁıes
+//implementa√ß√£o das fun√ß√µes
 int calculaMenor (int num1, int num2)
 {
 	return (num1<num2)?num1:num2;
@@ -52,25 +31,15 @@ int calculaMenor (int num1, int num2)
 
 int mdc (int a, int b)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int menor, i, resp;
 	
 	//calculando o menor entre 'a' e 'b'
-	/*if (a < b)
-	{
-		menor = a;
-	}
-	else
-	{
-		menor = b;
-	}*/
-	
-	//menor = (a<b)?a:b;
 	menor = calculaMenor(a,b);
 	
 	for (i=1;i<=menor;i++)
 	{
-		//verificando se 'i' È divisor dos dois valores (ou seja, se È um divisor comum)
+		//verificando se 'i' √© divisor dos dois valores (ou seja, se √© um divisor comum)
 		if ((a%i==0) && (b%i==0))
 		{
 			resp = i;
