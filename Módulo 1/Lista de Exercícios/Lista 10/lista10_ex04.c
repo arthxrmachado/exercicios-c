@@ -1,42 +1,37 @@
 /*
-	FAC		- 	   Turma B
-	Lista de Exercícios X
-	
-	QUESTÃO 04:
-	Fazer uma função que armazene em um vetor os 50 
-	primeiros termos da seguinte sequência:
+QUESTÃƒO 04: Fazer uma funÃ§Ã£o que armazene em um vetor os 50 primeiros termos da seguinte sequÃªncia:
 
-				S = 1, 2, 4, 7, 11, 16, ...
+		S = 1, 2, 4, 7, 11, 16, ...
 
-	Nota: observem que a diferença entre o 1º e 2º elementos 
-	é igual a 1, entre o 2º e 3º é igual a 2, entre o 3º e o 
-	4º é igual a 3, e assim sucessivamente.
+	Nota: observem que a diferenÃ§a entre o 1Âº e 2Âº elementos 
+	Ã© igual a 1, entre o 2Âº e 3Âº Ã© igual a 2, entre o 3Âº e o 
+	4Âº Ã© igual a 3, e assim sucessivamente.
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 void preencheVetor (int v[], int tamanho);
 void exibir (int v[], int tamanho);
 
 //main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int vet[50];
 
-	//chamando a função
+	//chamando a funÃ§Ã£o
 	preencheVetor (vet, 50);
 	
 	//exibindo o vetor
 	exibir (vet, 50);
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 void preencheVetor (int v[], int tamanho)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i, j=1;
 	
 	//preenchendo o vetor
@@ -50,7 +45,7 @@ void preencheVetor (int v[], int tamanho)
 
 void exibir (int v[], int tamanho)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i;
 	
 	printf ("\nVetor: ");
