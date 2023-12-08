@@ -1,40 +1,32 @@
 /*
-  FAC - Turma B - 2020/1
-  Professor Leonardo Vianna
-  
-  Lista de Exercícios IX:
-  
-  QUESTÃO 03:
-  Fazer uma função leituraDados que permaneça lendo valores 
-  reais até que o número 0 seja digitado. Ao final, a função 
-  deve determinar a quantidade de elementos fornecidos 
-  (excluindo o 0) e o maior dentre eles.
+QUESTÃƒO 03: Fazer uma funÃ§Ã£o leituraDados que permaneÃ§a lendo valores reais atÃ© que o nÃºmero 0 seja digitado. Ao final, a funÃ§Ã£o deve determinar a 
+quantidade de elementos fornecidos (excluindo o 0) e o maior dentre eles.
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 void leituraDados (int *quant, float *maior);
 
 //main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int quantidade;
 	float maior;
 	
-	//chamando a função
+	//chamando a funÃ§Ã£o
 	leituraDados (&quantidade, &maior);
 	
 	//exibindo os resultados
 	printf ("Quantidade: %d\nMaior: %.1f\n", quantidade, maior);	
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 void leituraDados (int *quant, float *maior)
 {
-	//declaração de variáveis	
+	//declaraÃ§Ã£o de variÃ¡veis	
 	float n, ma=-99999;
 	int cont=0;
 	
@@ -50,7 +42,7 @@ void leituraDados (int *quant, float *maior)
 			cont++;
 		//}
 		
-		//verificando se o número recém fornecido é o maior de todos
+		//verificando se o nÃºmero recÃ©m fornecido Ã© o maior de todos
 		if (n > ma)
 		{
 			ma = n;
