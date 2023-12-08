@@ -1,7 +1,6 @@
 /*
 QUESTÃO 02: Dados dois números inteiros A e B, fazer uma função que determine o número de potências de 2 existentes no intervalo definido pelos dois valores,
 assim como a maior delas.
-
 */
 
 #include <stdio.h>
