@@ -1,25 +1,18 @@
 /*
-  FAC - Turma B - 2020/1
-  Professor Leonardo Vianna
-  
-  Lista de Exercícios IX:
-  
-  QUESTÃO 01:
-  Desenvolver uma função que, dado um número inteiro n, 
-  exiba todos os números existentes no intervalo definido 
-  por a e b (a < b), exceto aqueles que forem múltiplos de n.
+QUESTÃƒO 01: Desenvolver uma funÃ§Ã£o que, dado um nÃºmero inteiro n, exiba todos os nÃºmeros existentes no intervalo definido por a e b (a < b), exceto aqueles 
+que forem mÃºltiplos de n.
   
   Exemplos:
   	n = 4
   	a = 10, b = 20
   	
-  	Saída: 10, 11, 13, 14, 15, 17, 18, 19 
+  	SaÃ­da: 10, 11, 13, 14, 15, 17, 18, 19 
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 void exibir (int n, int a, int b);
 
 //main
@@ -28,16 +21,16 @@ void main ()
 	exibir (4, 10, 20);
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 void exibir (int n, int a, int b)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i;
 	
 	//percorrendo o intervalo de 'a' a 'b'
 	for (i=a;i<=b;i++)
 	{
-		//verificando se i não é múltiplo de n
+		//verificando se i nÃ£o Ã© mÃºltiplo de n
 		if (i%n != 0)
 		{
 			printf ("%d ", i);
