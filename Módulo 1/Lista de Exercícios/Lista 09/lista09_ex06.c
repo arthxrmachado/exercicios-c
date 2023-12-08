@@ -1,21 +1,13 @@
-
 /*
-  FAC - Turma B - 2020/1
-  Professor Leonardo Vianna
-  
-  Lista de Exercícios IX:
-  
-  QUESTÃO 06:
-  Desenvolver uma função que, dado um número inteiro N, 
-  calcule o valor do seguinte somatório:
+QUESTÃƒO 06: Desenvolver uma funÃ§Ã£o que, dado um nÃºmero inteiro N, calcule o valor do seguinte somatÃ³rio:
 
-	S= 1+((n-1)!^1)/1!+(n-2)!^2/2!+(n-3)!^3/3!+...+1^(n-1)/((n-1)!)
+S= 1+((n-1)!^1)/1!+(n-2)!^2/2!+(n-3)!^3/3!+...+1^(n-1)/((n-1)!)
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 float somatorio (int n);
 int potencia (int base, int expoente);
 int fatorial (int n);
@@ -23,7 +15,7 @@ int fatorial (int n);
 //main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int numero;
 	float soma;
 	
@@ -31,17 +23,17 @@ void main ()
 	printf ("Entre com um numero: ");
 	scanf ("%d", &numero);
 	
-	//chamando a função
+	//chamando a funÃ§Ã£o
 	soma = somatorio (numero);
 	
 	//exibindo o resultado
 	printf ("Soma = %.1f", soma);
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 float somatorio (int n)
 {
-	//declaração de vaiáveis
+	//declaraÃ§Ã£o de vaiÃ¡veis
 	int i, numerador, denominador;
 	float S = 0;
 	
@@ -60,10 +52,10 @@ float somatorio (int n)
 
 int potencia (int base, int expoente)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i, pot=1;
 	
-	//calculando a potência
+	//calculando a potÃªncia
 	for (i=1;i<=expoente;i++)
 	{
 		pot *= base;
@@ -75,7 +67,7 @@ int potencia (int base, int expoente)
 
 int fatorial (int n)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i, fat=1;
 	
 	//calculando o fatorial
