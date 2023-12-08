@@ -1,82 +1,72 @@
 /*
-   FAC - Turma B
-   Professor Leonardo Vianna
-   Data: 12/11/2020
-   
-   Correção das questões da AV1
-   
-   Questão 02 [2,0 pontos]:
-   Fazer uma função que permaneça lendo valores enquanto 
-   estes estiverem em ordem crescente, e determine a 
-   quantidade de valores fornecidos assim como a quantidade 
-   de números distintos (neste último caso, desconsiderar o 
-   valor responsável pela parada da leitura).
+QuestÃ£o 02: Fazer uma funÃ§Ã£o que permaneÃ§a lendo valores enquanto estes estiverem em ordem crescente, e determine a quantidade de valores fornecidos assim 
+como a quantidade de nÃºmeros distintos (neste Ãºltimo caso, desconsiderar o valor responsÃ¡vel pela parada da leitura).
    
    Exemplo:
-	Sequência de números fornecidos:
+	SequÃªncia de nÃºmeros fornecidos:
 	5  7  9  9  12  15  15  15  18  7
 
 	Quantidade de valores: 10
 	Quantidade de valores distintos: 6 
 	
 	Notas:
-	i. A solução deve estar na linguagem de programação C;
-	ii.	Deve ser apresentada a função main() com a chamada à 
-	função desenvolvida;
-	iii. Salvar o arquivo com o seu nome completo, seguido da extensão .c.
+	i. A soluÃ§Ã£o deve estar na linguagem de programaÃ§Ã£o C;
+	ii.	Deve ser apresentada a funÃ§Ã£o main() com a chamada Ã  
+	funÃ§Ã£o desenvolvida;
+	iii. Salvar o arquivo com o seu nome completo, seguido da extensÃ£o .c.
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//protótipo da função
+//protÃ³tipo da funÃ§Ã£o
 void leituraCrescente (int *totalValores, int *totalDistintos);
 
 //main
 void main()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int quantidade, distintos;
 	
-	//chamando a função
+	//chamando a funÃ§Ã£o
 	leituraCrescente (&quantidade, &distintos);
 	
 	//exibindo os resultados
 	printf ("Quantidade: %d\nValores distintos: %d\n", quantidade, distintos);
 }
 
-//implementação da função
+//implementaÃ§Ã£o da funÃ§Ã£o
 void leituraCrescente (int *totalValores, int *totalDistintos)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int cont=1, diff=1, anterior, atual;
 	
 	//lendo o primeiro valor
 	printf("Entre com um valor: ");
 	scanf("%d", &atual);
 	
-    //enquanto a sequência for crescente
+    //enquanto a sequÃªncia for crescente
 	do
 	{	
-	    //antes de ler o próximo valor, guardar o atual em 'anterior'
+	    //antes de ler o prÃ³ximo valor, guardar o atual em 'anterior'
 		anterior=atual;
 		
-		//lendo o próximo valor
+		//lendo o prÃ³ximo valor
 		printf("Entre com um valor: ");
 		scanf("%d", &atual);		
 	
-		//atualizando a quantidade de números distintos			
+		//atualizando a quantidade de nÃºmeros distintos			
 		if (atual>anterior)
 		{
 			diff++;
 		}			
         
-        //contando o número de valores digitados
+        //contando o nÃºmero de valores digitados
 		cont++;	
 	}
 	while (atual>=anterior);
 	
-	//armazenando os resultados nos parâmetros por referência
+	//armazenando os resultados nos parÃ¢metros por referÃªncia
 	*totalValores = cont;   
 	*totalDistintos = diff;	
 }
