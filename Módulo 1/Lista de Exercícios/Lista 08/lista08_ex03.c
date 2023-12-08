@@ -1,31 +1,19 @@
 /*
-   FAC - Turma B - 2020/1
-   Professor Leonardo Vianna
-   
-   Lista de ExercÌcios VIII (FunÁıes):
-   
-   QUEST√O 03:
-   Desenvolver uma funÁ„o que calcule o n-Èsimo termo da 
-   sequÍncia de Fibonacci.
-   
-   						________
-   					-->	|      | -->
-   					-->	|______|
-					   
-	Fibonacci: 1 1 2 3 5 8 13 21 ...
-	                          *
+QUEST√ÉO 03: Desenvolver uma fun√ß√£o que calcule o n-√©simo termo da sequ√™ncia de Fibonacci.
+
+Fibonacci: 1 1 2 3 5 8 13 21...
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
-//protÛtipos das funÁıes
+//prot√≥tipos das fun√ß√µes
 int fibonacci (int n);
 
 //main
 void main ()
 {	
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int ordem;
 		
 	//lendo a ordem do elemento desejado
@@ -41,10 +29,10 @@ void main ()
 	}
 }
 
-//implementaÁ„o das funÁıes
+//implementa√ß√£o das fun√ß√µes
 int fibonacci (int n)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int ultimo, penultimo, termo, i;
 	
 	//if ((n == 1) || (n == 2))
@@ -67,6 +55,3 @@ int fibonacci (int n)
 		return termo;
 	}
 }
-//        T 
-//1 1 2 3 5 8 13 21 ...
-//    P U 
