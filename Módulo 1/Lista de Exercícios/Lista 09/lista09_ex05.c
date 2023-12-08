@@ -1,18 +1,11 @@
 /*
-
-	Lista de Exercícios - IX
-	
-	QUESTÃO 05: Fazer uma função que exiba a tabuada de
-	potências de um número n, no intervalo de 1 a
-	9. Se o número não estiver neste intervalo, o
-	código 0 deve ser retornado; caso contrário,
-	retorna-se 1.
-
+QUESTÃƒO 05: Fazer uma funÃ§Ã£o que exiba a tabuada de potÃªncias de um nÃºmero n, no intervalo de 1 a 9. Se o nÃºmero nÃ£o estiver neste intervalo, o cÃ³digo 0 
+deve ser retornado; caso contrÃ¡rio, retorna-se 1.
 */
 
 #include <stdio.h>
 
-//protótipo das funções
+//protÃ³tipo das funÃ§Ãµes
 
 void exibirTabuada (int n);
 
@@ -20,7 +13,7 @@ void exibirTabuada (int n);
 
 void main(){
 	
-	//variáveis
+	//variÃ¡veis
 	
 	int n;
 	
@@ -43,11 +36,11 @@ void main(){
 	
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 
 void exibirTabuada (int n){
 	
-	//variáveis
+	//variÃ¡veis
 	
 	int i, potencia=1;
 	
