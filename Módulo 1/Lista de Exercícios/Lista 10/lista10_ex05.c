@@ -1,23 +1,14 @@
 /*
-   FAC - Turma B
-   Professor Leonardo Vianna
-   Data: 12/11/2020
-   
-   Lista de ExercÌcios X
-   
-   QUEST√O 05:
-   Elaborar uma funÁ„o que, dado um conjunto de 300 valores 
-   inteiros, distribua-os em 2 vetores conforme forem pares 
-   ou Ìmpares.
+QUEST√ÉO 05: Elaborar uma fun√ß√£o que, dado um conjunto de 300 valores inteiros, distribua-os em 2 vetores conforme forem pares ou √≠mpares.
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
-//declaraÁ„o de constantes
+//declara√ß√£o de constantes
 #define TAM 300
 
-//protÛtipos das funÁıes
+//prot√≥tipos das fun√ß√µes
 void preencherVetor (int v[], int tamanho);
 void exibirVetor (int v[], int tamanho);
 void verificaParidade (int v[], int tamV, int pares[], int *tamP, int impares[], int *tamI);
@@ -25,14 +16,14 @@ void verificaParidade (int v[], int tamV, int pares[], int *tamP, int impares[],
 //main
 void main()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int vetor[TAM], vetP[TAM], vetI[TAM];
 	int quantP, quantI;
 	
 	//preenchendo o vetor original aleatoriamente
     preencherVetor (vetor, TAM);
     
-    //separando os elementos nos vetores de pares e de Ìmpares
+    //separando os elementos nos vetores de pares e de √≠mpares
     verificaParidade (vetor, TAM, vetP, &quantP, vetI, &quantI);
 
     //exibindo os vetores 
@@ -46,11 +37,11 @@ void main()
 	exibirVetor (vetI, quantI);	
 }
 
-//implementaÁ„o das funÁıes
-//preenchendo o vetor com valores fornecidos pelo usu·rio
+//implementa√ß√£o das fun√ß√µes
+//preenchendo o vetor com valores fornecidos pelo usu√°rio
 /*void preencherVetor (int v[], int tamanho)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;
 	
 	//lendo os elementos do vetor
@@ -64,10 +55,10 @@ void main()
 //preenchendo o vetor com valores gerados randomicamente
 void preencherVetor (int v[], int tamanho)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;
 	
-	//garantindo que a sequÍncia mude a cada alteraÁ„o
+	//garantindo que a sequ√™ncia mude a cada altera√ß√£o
 	srand (time(NULL));  //semente - seed
 	
 	//lendo os elementos do vetor
@@ -80,7 +71,7 @@ void preencherVetor (int v[], int tamanho)
 //exibe na tela os elementos de um vetor com 'tamanho' elementos
 void exibirVetor (int v[], int tamanho)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;
 	
 	
@@ -97,13 +88,13 @@ void exibirVetor (int v[], int tamanho)
 //separando os elementos do vetor 'v' em pares e impares
 void verificaParidade (int v[], int tamV, int pares[], int *tamP, int impares[], int *tamI)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i, j=0, k=0;
 	
 	//varrendo o vetor original
 	for (i=0;i<tamV;i++)
 	{
-		//verificando se o elemento È par
+		//verificando se o elemento √© par
 		if (v[i]%2==0)
 		{
 			pares[j] = v[i];
@@ -116,18 +107,7 @@ void verificaParidade (int v[], int tamV, int pares[], int *tamP, int impares[],
 		}
 	}	
 	
-	//retornando a quantidade de pares e de Ìmpares
+	//retornando a quantidade de pares e de √≠mpares
 	*tamP = j;
 	*tamI = k;
 }
-
-/*
-v:          4  8  3  4  5  6
-i:          0  1  2  3  4  5
-     
-pares:		4  8  4  6
-j:          0  1  2  3  4
-	
-impares:    3  5
-k:          0  1  2
-*/
