@@ -1,31 +1,23 @@
 /*
-   FAC - Turma B - 2020/1
-   Professor Leonardo Vianna
-   
-   Lista de Exercícios VIII (Funções):
-   
-   QUESTÃO 07:
-   Implementar uma função que, dado um número inteiro n, e o 
-   intervalo definido pelos números a e b, determine quantos 
-   valores do intervalo possuem divisores (sendo estes diferentes 
-   de 1) que também sejam divisores de n.
+QUESTÃƒO 07: Implementar uma funÃ§Ã£o que, dado um nÃºmero inteiro n, e o intervalo definido pelos nÃºmeros a e b, determine quantos valores do intervalo possuem
+divisores (sendo estes diferentes de 1) que tambÃ©m sejam divisores de n.
    
    Exemplo:
-   	    n = 6  (2 3 6)
+   	    	n = 6  (2 3 6)
 		a = 10 e b = 20
 
-	Resposta = 7 (pois os números 10, 12, 14, 15, 16, 18 e 20 
-	              possuem divisores em comum com o número 6).
+	Resposta = 7 (pois os nÃºmeros 10, 12, 14, 15, 16, 18 e 20 
+	              possuem divisores em comum com o nÃºmero 6).
 
 	
 	intervalo: 10, 11, 12, 13, 14, 15 ,16 ,17 ,18 ,19 ,20 
 	            *      *       *   *   *       *       *
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 int verificarDivisores (int n, int a, int b);
 
 //main
@@ -36,13 +28,13 @@ void main ()
 	printf ("%d elementos encontrados.\n", resposta);
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 int verificarDivisores (int n, int a, int b)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i, j, resp = 0, comuns, aux;
 	
-	//verificando se o intervalo está crescente
+	//verificando se o intervalo estÃ¡ crescente
 	if (a > b)
 	{
 		aux = a;
@@ -53,13 +45,13 @@ int verificarDivisores (int n, int a, int b)
 	//varrendo o intervalo
 	for (i=a;i<=b;i++)
 	{
-		//contar o número de divisores comuns entre 'i' e 'n'
+		//contar o nÃºmero de divisores comuns entre 'i' e 'n'
 		comuns = 0;
 		
-		//varrendo os possíveis divisores de n
+		//varrendo os possÃ­veis divisores de n
 		for (j=2;j<=n;j++)
 		{
-			//verificando se 'j' é divisor de 'n' e do número do intervalo ('i')
+			//verificando se 'j' Ã© divisor de 'n' e do nÃºmero do intervalo ('i')
 			if ((n%j==0) && (i%j==0))
 			{
 				comuns++;
