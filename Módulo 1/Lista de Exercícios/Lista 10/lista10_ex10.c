@@ -1,15 +1,7 @@
 /*
-   FAC - Turma B
-   Professor Leonardo Vianna
-   Data: 24/11/2020
+QUEST√ÉO 10: Fazer um fun√ß√£o que, dados dois vetores A e B com n√∫meros inteiros, gerar o vetor C que consiste na uni√£o dos dois primeiros.
    
-   Lista de ExercÌcios X
-   
-   QUEST√O 10:
-   Fazer um funÁ„o que, dados dois vetores A e B com n˙meros inteiros, gerar o vetor C que 
-   consiste na uni„o dos dois primeiros.
-   
-   Nota: considerar que n„o existe repetiÁ„o no conjunto A, nem no conjunto B.
+   Nota: considerar que n√£o existe repeti√ß√£o no conjunto A, nem no conjunto B.
    
    Exemplo:
    
@@ -19,10 +11,10 @@
    		A U B: 3 6 1 2 4 7 5 8
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
-//protÛtipos das funÁıes
+//prot√≥tipos das fun√ß√µes
 void exibirVetor (int v[], int quantidade);
 int buscar (int v[], int quantidade, int numero);
 void uniao (int A[], int quantA, int B[], int quantB, int C[], int *quantC);
@@ -30,13 +22,13 @@ void uniao (int A[], int quantA, int B[], int quantB, int C[], int *quantC);
 //main
 void main()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int vetA[5] = {6,1,4,2,0};
 	int vetB[8] = {3,9,1,4,10,5,7,8};
 	int vetC[13];
 	int quant;
 	
-	//chamando a funÁ„o
+	//chamando a fun√ß√£o
 	uniao (vetA, 5, vetB, 8, vetC, &quant);
 	
 	//exibindo os conjuntos
@@ -45,15 +37,15 @@ void main()
 	exibirVetor (vetC, quant);
 }
 
-//implementaÁ„o das funÁıes
+//implementa√ß√£o das fun√ß√µes
 
 //exibe na tela os elementos de um vetor com 'tamanho' elementos
 void exibirVetor (int v[], int tamanho)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;	
 	
-	//verirficando se o vetor est· vazio
+	//verirficando se o vetor est√° vazio
 	if (tamanho == 0)
 	{
 		printf ("\nNenhum elemento no vetor!\n");
@@ -73,7 +65,7 @@ void exibirVetor (int v[], int tamanho)
 
 int buscar (int v[], int quantidade, int numero)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;
 	
 	//percorrendo o vetor
@@ -86,13 +78,13 @@ int buscar (int v[], int quantidade, int numero)
 		}
 	}
 	
-	//se chegou neste ponto, È porque o elemento n„o existe no vetor
+	//se chegou neste ponto, √© porque o elemento n√£o existe no vetor
 	return -1;
 }
 
 void uniao (int A[], int quantA, int B[], int quantB, int C[], int *quantC)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i, j; 
 	
 	//parte I: copiar para C todos os elementos de A
@@ -101,10 +93,10 @@ void uniao (int A[], int quantA, int B[], int quantB, int C[], int *quantC)
 		C[i] = A[i];
 	}
 	
-	//parte II: copiar para C os elementos de B que n„o est„o em A
+	//parte II: copiar para C os elementos de B que n√£o est√£o em A
 	for (j=0;j<quantB;j++)
 	{
-		//verificando se o elemento 'B[j]' N√O existe no vetor 'A'
+		//verificando se o elemento 'B[j]' N√ÉO existe no vetor 'A'
 		if (buscar (A, quantA, B[j]) == -1)
 		{
 			C[i] = B[j];
@@ -112,16 +104,6 @@ void uniao (int A[], int quantA, int B[], int quantB, int C[], int *quantC)
 		}
 	}
 	
-	//salvando o tamanho do vetor uni„o
+	//salvando o tamanho do vetor uni√£o
 	*quantC = i;
 }
-	
- /*  		A:	3  6  1  2
-            0  1  2  3
-            
-   		B:  1  4  7  6  2  5  8
-   		    0  1  2  3  4  5  6
-   		    
-   		A U B: 3  6  1  2  4  7  5  8  
-   		       0  1  2  3  4  5  6  7  8  9  10  11  12
-*/
