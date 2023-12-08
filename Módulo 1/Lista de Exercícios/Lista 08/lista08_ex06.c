@@ -1,13 +1,5 @@
 /*
-   FAC - Turma B - 2020/1
-   Professor Leonardo Vianna
-   
-   Lista de Exercícios VIII (Funções):
-   
-   QUESTÃO 06:
-   Implementar uma função que, dado um número inteiro N, 
-   exiba uma sequência de números como as ilustradas nos 
-   exemplos a seguir:
+QUESTÃƒO 06: Implementar uma funÃ§Ã£o que, dado um nÃºmero inteiro N, exiba uma sequÃªncia de nÃºmeros como as ilustradas nos exemplos a seguir:
    
    Exemplo 1:  N = 3
    
@@ -20,30 +12,30 @@
    (5 3) (5 4)
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 void exibir (int n);
 
 //main
 void main ()
 {	
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int numero;
 	
 	//lendo o valor de entrada
-	printf("Digite um número:");
+	printf("Digite um nÃºmero:");
 	scanf("%d", &numero);
 	
-	//chamando a função
+	//chamando a funÃ§Ã£o
 	exibir (numero);
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 void exibir (int n)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i, j;
 	
 	//printando sequencia
