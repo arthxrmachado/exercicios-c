@@ -1,44 +1,38 @@
 /*
-	FAC		- 	   Turma B
-	Lista de ExercÌcios X
-	
-	QUEST√O 02:
-	Implementar uma funÁ„o que, dado um vetor de reais, 
-	troque o 1  e o 2  elementos, em seguida o 3  e o 4  
-	elementos e assim sucessivamente, atÈ se chegar ao final 
-	do vetor.
+QUEST√ÉO 02: Implementar uma fun√ß√£o que, dado um vetor de reais, troque o 1 e o 2  elementos, em seguida o 3 e o 4  elementos e assim sucessivamente, at√© se
+chegar ao final do vetor.
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
-//declaraÁ„o de constantes
+//declara√ß√£o de constantes
 #define TAM 10
 
-//protÛtipos das funÁıes
+//prot√≥tipos das fun√ß√µes
 void trocar (float v[], int tamVetor);
 void exibir (float v[], int tamVetor);
 
 //main
 void main ()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	float vetor[TAM] = {1,7,9,5,7,1,2,7,1,7};
 
 	//exibindo o vetor antes da troca
 	exibir (vetor, TAM);
 	
-	//chamando a funÁ„o troca	
+	//chamando a fun√ß√£o troca	
 	trocar (vetor, TAM);		
 	
-	//exibindo o vetor apÛs a troca
+	//exibindo o vetor ap√≥s a troca
 	exibir (vetor, TAM);
 }
 
-//implementaÁ„o das funÁıes
+//implementa√ß√£o das fun√ß√µes
 void trocar (float vetor[], int tamVetor)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;
 	float aux;
 	
@@ -53,7 +47,7 @@ void trocar (float vetor[], int tamVetor)
 
 void exibir (float v[], int tamVetor)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;
 	
 	printf ("\nVetor: ");
