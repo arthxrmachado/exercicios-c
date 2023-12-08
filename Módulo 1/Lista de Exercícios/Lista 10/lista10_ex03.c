@@ -1,35 +1,29 @@
 /*
-	FAC		- 	   Turma B
-	Lista de ExercÌcios X
-	
-	QUEST√O 03:
-	Pede-se a implementaÁ„o de uma funÁ„o que, dado um vetor 
-	contendo n˙meros reais, determine se o mesmo encontra-se 
-	ordenado de forma crescente.
+QUEST√ÉO 03: Pede-se a implementa√ß√£o de uma fun√ß√£o que, dado um vetor contendo n√∫meros reais, determine se o mesmo encontra-se ordenado de forma crescente.
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
-//declaraÁ„o de constantes
+//declara√ß√£o de constantes
 #define TRUE 1
 #define FALSE 0
 
-//protÛtipos das funÁıes
+//prot√≥tipos das fun√ß√µes
 int verificaOrdenacao (float v[], int tamanho);
 void exibir (float v[], int tamVetor);
 
 //main
 void main ()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	float vet1[5] = {1,7,9,8,10},
 	      vet2[8] = {3.2, 4.5, 7, 8.1, 8.4, 9, 9.7, 10};
 
 	//exibindo o vetor 1
 	exibir (vet1, 5);
 	
-	//verificando se o vetor 1 est· ordenada
+	//verificando se o vetor 1 est√° ordenada
 	if (verificaOrdenacao (vet1, 5) == TRUE)
 	{
 		printf ("Vet1 esta ordenado crescentemente!\n\n");
@@ -42,7 +36,7 @@ void main ()
 	//exibindo o vetor 2
 	exibir (vet2, 8);
 	
-	//verificando se o vetor 2 est· ordenada
+	//verificando se o vetor 2 est√° ordenada
 	if (verificaOrdenacao (vet2, 8) == TRUE)
 	{
 		printf ("Vet2 esta ordenado crescentemente!\n");
@@ -53,10 +47,10 @@ void main ()
 	}
 }
 
-//implementaÁ„o das funÁıes
+//implementa√ß√£o das fun√ß√µes
 int verificaOrdenacao (float v[], int tamanho)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;
 		
 	//varrendo o vetor comparando os elementos dois a dois
@@ -73,7 +67,7 @@ int verificaOrdenacao (float v[], int tamanho)
 
 void exibir (float v[], int tamVetor)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;
 	
 	printf ("\nVetor: ");
