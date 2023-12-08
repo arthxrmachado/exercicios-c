@@ -1,26 +1,19 @@
 /*
-   FAC - Turma B - 2020/1
-   Professor Leonardo Vianna
-   
-   Lista de Exercícios VIII (Funções):
-   
-   QUESTÃO 02:
-   Implementar uma função que converta determinada temperatura 
-   em graus Celsius para graus Fahrenheit.
-   
-   F = 1.8 x C + 32 
+QUESTÃƒO 02: Implementar uma funÃ§Ã£o que converta determinada temperatura em graus Celsius para graus Fahrenheit.
+
+F = 1.8 x C + 32 
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 float converterTemperatura (float C);
 
 //main
 void main ()
 {	
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	float celsius, fahrenheit;
 	int i;
 
@@ -30,7 +23,7 @@ void main ()
 	printf ("Entre com a temperatura em Celsius: ");
 	scanf ("%f", &celsius);
 	
-	//chamando a função de conversão
+	//chamando a funÃ§Ã£o de conversÃ£o
 	fahrenheit = converterTemperatura (celsius);
 	
 	//exibindo o resultado
@@ -45,7 +38,7 @@ void main ()
 	}
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 float converterTemperatura (float C)  
 {
 /*	float F;
