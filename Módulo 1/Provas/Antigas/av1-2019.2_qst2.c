@@ -1,47 +1,37 @@
 /*
-   FAC - Turma B
-   
-   AV1 aplicada em 2019/2
-   
-   Quest„o 02 [2,5 pontos]:
-   Construir um programa que permita ao usu·rio calcular a 
-   ·rea de diferentes figuras geomÈtricas. Para isto, 
-   permanecer· apresentando um menu de opÁıes  
-   ([C]Ìrculo, [R]et‚ngulo, [Q]uadrado, [T]ri‚ngulo e [S]air) 
-   atÈ que o usu·rio opte por terminar a execuÁ„o do programa.
+Quest√£o 02: Construir um programa que permita ao usu√°rio calcular a √°rea de diferentes figuras geom√©tricas. Para isto, permanecer√° apresentando um menu de 
+op√ß√µes  ([C]√≠rculo, [R]et√¢ngulo, [Q]uadrado, [T]ri√¢ngulo e [S]air) at√© que o usu√°rio opte por terminar a execu√ß√£o do programa.
    
    Notas:
-     1. FÛrmulas para o c·lculo das ·reas:
-	    a. AcÌrculo = ?.raio2, onde ? = 3.14159;
-		b. Aret‚ngulo = base.altura;
-		c. Aquadrado = lado2; 
-		d. Atri‚ngulo = (base.altura)/2.
+     1. F√≥rmulas para o c√°lculo das √°reas:
+	a. Ac√≠rculo = ?.raio2, onde ? = 3.14159;
+	b. Aret√¢ngulo = base.altura;
+	c. Aquadrado = lado2; 
+	d. Atri√¢ngulo = (base.altura)/2.
 	 
-	 2. Caso o usu·rio escolha uma opÁ„o inv·lida, 
-	    uma mensagem de erro deve ser exibida e uma nova 
-		escolha solicitada.
+	 2. Caso o usu√°rio escolha uma op√ß√£o inv√°lida, uma mensagem de erro deve ser exibida e uma nova escolha solicitada.
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
-//declaraÁ„o de constantes
+//declara√ß√£o de constantes
 #define PI 3.14159
 
 //main
 void main ()
 {
-	//DeclaraÁ„o de vari·veis
+	//Declara√ß√£o de vari√°veis
 	char opcao;
 	float raio, base, altura, lado, area;
 	
-	//repetiÁ„o que sÛ vai parar quando o usu·rio optar pela saÌda
+	//repeti√ß√£o que s√≥ vai parar quando o usu√°rio optar pela sa√≠da
 	do
 	{
 		system ("cls");  //limpa a tela
 		//clrscr ();  //clear screen  ---> conio.h
 		
-		//exibindo as opÁıes
+		//exibindo as op√ß√µes
 		printf ("Menu de Opcoes:\n\n");
 		printf ("[C]irculo\n[R]etangulo\n[Q]uadrado\n[T]riangulo\n[S]air\n");
 		
@@ -50,10 +40,10 @@ void main ()
 		scanf ("%c", &opcao);
 		opcao = toupper (opcao); 
   
-		//verificando a opÁ„o do usu·rio
+		//verificando a op√ß√£o do usu√°rio
 		switch (opcao)
 		{
-			//cÌrculo
+			//c√≠rculo
 			case 'C': printf ("\n\nEntre com o raio: ");
 			          scanf ("%f", &raio);
 					  
@@ -63,7 +53,7 @@ void main ()
 					  
 					  break;  
 					  
-			//ret‚ngulo
+			//ret√¢ngulo
 			case 'R': printf ("\n\nEntre com a base: ");
 			          scanf ("%f", &base);
 			          
@@ -86,7 +76,7 @@ void main ()
 					  
 					  break;  
 
-			//tri‚ngulo
+			//tri√¢ngulo
 			case 'T': printf ("\n\nEntre com a base: ");
 			          scanf ("%f", &base);
 			          
@@ -99,7 +89,7 @@ void main ()
 					  
 					  break;  
 					  
-			//SaÌda do sistema
+			//Sa√≠da do sistema
 			case 'S': printf ("\n\nFim do programa!\n");
 			          break;
 			          
