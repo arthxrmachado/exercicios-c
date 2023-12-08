@@ -1,22 +1,14 @@
 /*
-   FAC - Turma B
-   Professor Leonardo Vianna
-   Data: 12/11/2020
-   
-   Lista de Exercícios X
-   
-   QUESTÃO 06:
-   Faça uma função que, dado um vetor de reais, altere 
-   todas as ocorrências do número A pelo número B.
+QUESTÃƒO 06: FaÃ§a uma funÃ§Ã£o que, dado um vetor de reais, altere todas as ocorrÃªncias do nÃºmero A pelo nÃºmero B.
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//declaração de constantes
+//declaraÃ§Ã£o de constantes
 #define TAM 20
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 void preencherVetor (float v[], int tamanho);
 void exibirVetor (float v[], int tamanho);
 void alterar (float v[], int tamanho, float A, float B);
@@ -24,39 +16,39 @@ void alterar (float v[], int tamanho, float A, float B);
 //main
 void main()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	float vetor[TAM];
 	float num1, num2;
 	
 	//preenchendo o vetor aleatoriamente
     preencherVetor (vetor, TAM);
     
-    //exibindo o vetor antes da alteração
+    //exibindo o vetor antes da alteraÃ§Ã£o
 	exibirVetor (vetor, TAM);	
     
-    //lendo os valores envolvidos na alteração
+    //lendo os valores envolvidos na alteraÃ§Ã£o
     printf ("Entre com o valor a ser alterado: ");
     scanf ("%f", &num1);
     
     printf ("Entre com o novo valor: ");
     scanf ("%f", &num2);
     
-    //chamando a função
+    //chamando a funÃ§Ã£o
     alterar (vetor, TAM, num1, num2);
     
-    //exibindo o vetor após a alteração
+    //exibindo o vetor apÃ³s a alteraÃ§Ã£o
 	exibirVetor (vetor, TAM);	
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 
 //preenchendo o vetor com valores gerados randomicamente
 void preencherVetor (float v[], int tamanho)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i;
 	
-	//garantindo que a sequência mude a cada alteração
+	//garantindo que a sequÃªncia mude a cada alteraÃ§Ã£o
 	srand (time(NULL));  //semente - seed
 	
 	//lendo os elementos do vetor
@@ -69,7 +61,7 @@ void preencherVetor (float v[], int tamanho)
 //exibe na tela os elementos de um vetor com 'tamanho' elementos
 void exibirVetor (float v[], int tamanho)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i;
 	
 	
@@ -83,10 +75,10 @@ void exibirVetor (float v[], int tamanho)
 	printf ("\n\n");
 }
 
-//altera todas as ocorrências do número 'A' por 'B' no vetor 'v'
+//altera todas as ocorrÃªncias do nÃºmero 'A' por 'B' no vetor 'v'
 void alterar (float v[], int tamanho, float A, float B)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i;
 	
 	//varrendo o vetor
