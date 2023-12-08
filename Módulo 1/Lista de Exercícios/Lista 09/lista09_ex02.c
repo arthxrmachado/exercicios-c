@@ -1,16 +1,12 @@
 /*
-
-	Lista de Exercícios - IX
-	
-	QUESTÃO 02: 
-	Dados dois números inteiros A e B, fazer uma função que determine o número de potências 
-	de 2 existentes no intervalo definido pelos dois valores, assim como a maior delas.
+QUESTÃƒO 02: Dados dois nÃºmeros inteiros A e B, fazer uma funÃ§Ã£o que determine o nÃºmero de potÃªncias de 2 existentes no intervalo definido pelos dois valores,
+assim como a maior delas.
 
 */
 
 #include <stdio.h>
 
-//protótipo das funções
+//protÃ³tipo das funÃ§Ãµes
 
 void exibirPotencia (int a, int b);
 
@@ -18,7 +14,7 @@ void exibirPotencia (int a, int b);
 
 void main(){
 	
-	//variáveis
+	//variÃ¡veis
 	
 	int valor1, valor2;
 	
@@ -34,11 +30,11 @@ void main(){
 	
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 
 void exibirPotencia (int a, int b){
 	
-	//variáveis
+	//variÃ¡veis
 	
 	int i, maior=0;
 	   
