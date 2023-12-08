@@ -1,18 +1,11 @@
 /*
-   FAC - Turma B - 2020/1
-   Professor Leonardo Vianna
-   
-   Lista de Exercícios VIII (Funções):
-   
-   QUESTÃO 01:
-   Desenvolver uma função que exiba os múltiplos de N 
-   compreendidos no intervalo definido por A e B.
+QUESTÃƒO 01: Desenvolver uma funÃ§Ã£o que exiba os mÃºltiplos de N compreendidos no intervalo definido por A e B.
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 void exibirMultiplos (int n, int a, int b);
 
 //main
@@ -21,13 +14,13 @@ void main ()
 	exibirMultiplos (3, 10, 50);
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 void exibirMultiplos (int n, int a, int b)
 {
-	//declaração de variáveis	
+	//declaraÃ§Ã£o de variÃ¡veis	
 	int i, aux;
 	
-	//verificando se a < b. Se não for, trocar seus conteúdos
+	//verificando se a < b. Se nÃ£o for, trocar seus conteÃºdos
 	if (a > b)
 	{
 		aux = a;
