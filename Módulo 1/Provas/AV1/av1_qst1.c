@@ -1,20 +1,12 @@
 /*
-   FAC - Turma B
-   Professor Leonardo Vianna
-   Data: 12/11/2020
-   
-   Correção das questões da AV1
-   
-   Questão 01 [2,0 pontos]:
-   Desenvolver um programa que, dado um número inteiro N, determine a quantidade de 
-   combinações possíveis (e exiba-as) com três números (distintos entre si), com valores 
-   no intervalo de 1 a N.
+QuestÃ£o 01: Desenvolver um programa que, dado um nÃºmero inteiro N, determine a quantidade de combinaÃ§Ãµes possÃ­veis (e exiba-as) com trÃªs nÃºmeros (distintos 
+entre si), com valores no intervalo de 1 a N.
    
    Exemplo:
 
 	N = 3
 	
-	Combinações possíveis:
+	CombinaÃ§Ãµes possÃ­veis:
 	1 1 1			1 1 2			1 1 3			1 2 1			1 2 2
 	1 2 3			1 3 1			1 3 2			1 3 3			2 1 1
 	2 1 2			2 1 3			2 2 1			2 2 2			2 2 3
@@ -22,28 +14,28 @@
 	3 1 3			3 2 1			3 2 2			3 2 3			3 3 1
 	3 3 2			3 3 3
 
-	Portanto, a resposta é: 
+	Portanto, a resposta Ã©: 
 	1 2 3			1 3 2			2 1 3			2 3 1			3 1 2
 	3 2 1			
 
-	Total: 6 combinações
+	Total: 6 combinaÃ§Ãµes
 	
 	Notas:
-	i. A solução deve estar na linguagem de programação C;
+	i. A soluÃ§Ã£o deve estar na linguagem de programaÃ§Ã£o C;
 	ii. Caso o valor de N seja negativo ou nulo, uma mensagem 
-	de erro deve ser exibida ao usuário e um novo número deve 
-	ser solicitado (a execução do programa só deve continuar 
+	de erro deve ser exibida ao usuÃ¡rio e um novo nÃºmero deve 
+	ser solicitado (a execuÃ§Ã£o do programa sÃ³ deve continuar 
 	quando um valor positivo for fornecido);
-	iii. Salvar o arquivo com o seu nome completo, seguido da extensão .c.
+	iii. Salvar o arquivo com o seu nome completo, seguido da extensÃ£o .c.
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
 //main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int n, i, j, k, cont = 0;
 	
 	
@@ -53,7 +45,7 @@ void main ()
 		printf ("Entre com um numero positivo: ");
 		scanf ("%d", &n);
 		
-		//verificando se o valor é inválido
+		//verificando se o valor Ã© invÃ¡lido
 		if (n <= 0)
 		{
 			printf ("ERRO: o numero deve ser positivo! Tente novamente.\n\n");
@@ -61,14 +53,14 @@ void main ()
 	}
 	while (n <= 0);
 	
-	//gerando as combinações
+	//gerando as combinaÃ§Ãµes
 	for (i=1;i<=n;i++)
 	{
 		for (j=1;j<=n;j++)
 		{
 			for (k=1;k<=n;k++)
 			{
-				//verificando se todos os elementos são distintos
+				//verificando se todos os elementos sÃ£o distintos
 				if ((i!=j) && (i!=k) && (j!=k))
 				{
 					printf ("%d %d %d\n", i, j, k);
@@ -78,6 +70,6 @@ void main ()
 		}
 	}
 	
-	//exibindo o número de combinações apresentadas
+	//exibindo o nÃºmero de combinaÃ§Ãµes apresentadas
 	printf ("Total: %d combinacoes.\n", cont);
 }
