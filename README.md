@@ -1,4 +1,4 @@
-# Exercícios em C
+# exercicios-c
 
 Exercícios feitos utilizando a linguagem de programação C. 
 
@@ -12,17 +12,22 @@ No Módulo 2, é possível notar meu aprendizado na matéria de 2FPR (Fundamento
 
 Em cada código, logo no início, existe uma pequena descrição do que o programa faz.
 
-Projetos mais elaborados estarão fora deste repositório, e serão encontrados em repositóros próprios.
-
 # Módulo 1
+
+- Condições;
+- Estruturas de repetição;
+- Constantes;
+- Progressão arimética;
+- Funções;
+- Vetores.
 
 Na primeira lista é possível observar meu primeiro contato com a linguagem e exercícios bem básicos, usando apenas 'if' e 'else'.
 
 Na segunda lista encontra-se ainda exercícios básicos, porém um pouco mais elaborados. 
 
-Na terceira lista é apresentado o conceito de estruturas de repetição, temos diversos exercícios utilizando 'for'.
+Na terceira lista é apresentado o conceito de estruturas de repetição, com diversos exercícios utilizando 'for'.
 
-Já na quarta lista temos exercícios de estruturas de repetição mais elaborados, agora utilizando 'for', 'while' e 'do while'.
+Já na quarta lista tem-se exercícios de estruturas de repetição mais elaborados, agora utilizando 'for', 'while' e 'do while'.
 
 Observa-se na quinta lista o começo do uso de constantes e programas mais abragentes, que não são apenas focados em uma única coisa.
 
