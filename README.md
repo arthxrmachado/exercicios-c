@@ -12,7 +12,7 @@ No Módulo 2, é possível notar meu aprendizado na matéria de 2FPR (Fundamento
 
 Em cada código, logo no início, existe uma pequena descrição do que o programa faz.
 
-Projetos mais elaborados estarão fora deste repositório, e estarão em repositóros próprios.
+Projetos mais elaborados estarão fora deste repositório, e serão encontrados em repositóros próprios.
 
 # Módulo 1
 
