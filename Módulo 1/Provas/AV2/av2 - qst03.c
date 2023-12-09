@@ -1,5 +1,6 @@
 /* 
-Desenvolver um programa que leia um número inteiro positivo e o converta para as bases numéricas 2 (binária), 8 (octal) e 16 (hexadecimal), respeitando às seguintes regras:
+Desenvolver um programa que leia um número inteiro positivo e o converta para as bases numéricas 2 (binária), 8 (octal) e 16 (hexadecimal), respeitando às 
+seguintes regras:
 
 1. Devem ser implementados os seguintes módulos:
 
