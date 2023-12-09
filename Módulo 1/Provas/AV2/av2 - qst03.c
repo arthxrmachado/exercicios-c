@@ -2,13 +2,11 @@
 Desenvolver um programa que leia um número inteiro positivo e o converta para as bases numéricas 2 (binária), 8 (octal) e 16 (hexadecimal), respeitando às 
 seguintes regras:
 
-1. Devem ser implementados os seguintes módulos:
-
 a. Uma única função que, dado um número inteiro, converta-o para a base b, exibindo o resultado desta transformação;
-b. Uma função que valide o número fornecido pelo usuário, devendo este ser, obrigatoriamente, não negativo. Deve retornar o valor 0 caso o valor seja inválido; ou 1, caso contrário;
+b. Uma função que valide o número fornecido pelo usuário, devendo este ser, obrigatoriamente, não negativo. Deve retornar o valor 0 caso o valor seja 
+inválido; ou 1, caso contrário;
 c. Uma função que valide a base, que pode ser 2, 8 ou 16. Deve retornar o valor 0 caso a base seja inválida; ou 1, caso contrário.
-
-2. A função main deve permanecer lendo valores do usuário até que o número fornecido seja não negativo;
+d. A função main deve permanecer lendo valores do usuário até que o número fornecido seja não negativo;
 */
 
 #include <stdio.h>
