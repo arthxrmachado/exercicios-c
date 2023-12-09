@@ -1,4 +1,4 @@
-# exercicios-c
+# Exercícios em C
 
 Exercícios feitos utilizando a linguagem de programação C. 
 
@@ -14,7 +14,7 @@ Em cada código, logo no início, existe uma pequena descrição do que o progra
 
 Projetos mais elaborados estarão fora deste repositório, e estarão em repositóros próprios.
 
-# Informações
+# Módulo 1
 
 Na primeira lista é possível observar meu primeiro contato com a linguagem e exercícios bem básicos, usando apenas 'if' e 'else'.
 
@@ -35,3 +35,5 @@ Na oitava lista começo a utilizar funções em meus programas.
 Na penúltima lista, a lista nove, além de usar tudo que já foi aprendido, é uma lista focada bastante na matemática - com exercícios bem mais elaborados para melhorar minha lógica de programação.
 
 A última lista aprendo finalmente a usar vetores, todos os exercícíos dessa lista são focadas nisso.
+
+# Módulo 2
