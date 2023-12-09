@@ -1,5 +1,5 @@
 /*
-QUESTÃO 10: Fazer um função que, dados dois vetores A e B com números inteiros, gerar o vetor C que consiste na união dos dois primeiros.
+QUESTÃO 10: Fazer um função que, dado dois vetores A e B com números inteiros, gerar o vetor C que consiste na união dos dois primeiros.
    
    Nota: considerar que não existe repetição no conjunto A, nem no conjunto B.
    
