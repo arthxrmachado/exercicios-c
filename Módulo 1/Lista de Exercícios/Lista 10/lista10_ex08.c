@@ -1,5 +1,5 @@
 /*
-QUESTÃO 08: Dados um vetor de reais (cujos elementos estão ordenados crescentemente) e um número x, retornar a posição da primeira ocorrência de x 
+QUESTÃO 08: Dado um vetor de reais (cujos elementos estão ordenados crescentemente) e um número x, retornar a posição da primeira ocorrência de x 
 (caso encontre-se no vetor) ou a posição na qual deveria estar (caso contrário).
   
    Exemplo:
