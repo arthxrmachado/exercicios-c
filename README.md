@@ -36,4 +36,6 @@ Na penúltima lista, a lista nove, além de usar tudo que já foi aprendido, é 
 
 A última lista aprendo finalmente a usar vetores, todos os exercícíos dessa lista são focadas nisso.
 
+Além das listas de exercícios, nota-se as duas provas que fiz nesse semestre e também exercícios de provas anteriores.
+
 # Módulo 2
