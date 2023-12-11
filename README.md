@@ -21,26 +21,31 @@ Em cada código, logo no início, existe uma pequena descrição do que o progra
 - Funções;
 - Vetores.
 
-Na primeira lista é possível observar meu primeiro contato com a linguagem e exercícios bem básicos, usando apenas 'if' e 'else'.
+Nesse módulo é possível observar meu primeiro contato com a linguagem, começando com exercícios bem básicos utilizando apenas condições.
 
-Na segunda lista encontra-se ainda exercícios básicos, porém um pouco mais elaborados. 
+Com o andamento das listas de exercícios, observa-se meu aprendizado em relação a estruturas de repetições, uso de constantes, progressão aritmética e programas mais abrangentes.
 
-Na terceira lista é apresentado o conceito de estruturas de repetição, com diversos exercícios utilizando 'for'.
+Em seguida, nota-se o início do uso de funções e exercícios bem mais elaborados, focados bastante na matemática para melhorar minha lógica de programação.
 
-Já na quarta lista tem-se exercícios de estruturas de repetição mais elaborados, agora utilizando 'for', 'while' e 'do while'.
-
-Observa-se na quinta lista o começo do uso de constantes e programas mais abragentes, que não são apenas focados em uma única coisa.
-
-Sexta lista serve apenas para exercitar aquilo que já foi aprendido.
-
-Na sétima lista faço exercícios usando progressão aritmética.
-
-Na oitava lista começo a utilizar funções em meus programas.
-
-Na penúltima lista, a lista nove, além de usar tudo que já foi aprendido, é uma lista focada bastante na matemática - com exercícios bem mais elaborados para melhorar minha lógica de programação.
-
-A última lista aprendo finalmente a usar vetores, todos os exercícíos dessa lista são focadas nisso.
-
-Além das listas de exercícios, nota-se as duas provas que fiz nesse semestre e também exercícios de provas anteriores.
+Por fim, começo a usar vetores, tópico que será bastante aprofundado logo no módulo seguinte.
 
 # Módulo 2
+
+- Continuação de vetores;
+- Matriz bidimensional;
+- Matriz tridimensional;
+- Recursividade;
+- Strings;
+- Structs;
+- Arquivos;
+- Listas encadeadas.
+
+A partir daqui, deixo um pouco de lado os exercícios mais simples, e começo a trabalhar em verdadeiros projetos.
+
+Tenho uma compreensão bem mais apronfundada em vetores, solucionando problemas bem mais complexos.
+
+Utilizo diversos tipos de matriz em meus trabalhos, como: matriz bidimensional, tridimensional e transposta.
+
+Recursividade começa a ser utilizada em grandes partes de meus projetos, assim como conceitos mais avançados de strings e structs.
+
+Começo a utilizar arquivos em alguns projetos e atividades específicas, e por fim, aprimoro o uso de lista encadeadas.
