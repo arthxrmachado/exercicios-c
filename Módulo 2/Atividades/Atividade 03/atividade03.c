@@ -1,53 +1,53 @@
 /******************************************************************************
 	FAETERJ-Rio
 	
-	2FPR - Manh„ - 2021/1
+	2FPR - Manh√£ - 2021/1
 	
-	Aluno: Arthur LourenÁo Machado
+	Aluno: Arthur Louren√ßo Machado
 	
 	Data: 24/05/2021 - Atividade 3
 	
-	Quest„o 01:
+	Quest√£o 01:
 
-	Dada uma matriz de inteiros bidimensional M10x20, desenvolver uma funÁ„o que 
+	Dada uma matriz de inteiros bidimensional M10x20, desenvolver uma fun√ß√£o que 
 	troque os elementos da linha L1 pelos elementos (em ordem inversa) da linha L2, 
 	como ilustrado no exemplo abaixo:
 	
-	M = 4 5 1 3
+	M = 	4 5 1 3
 		9 7 8 1
 		0 2 9 4
 		4 7 2 8	
 		
 	Trocar os elementos da segunda linha - L1 - com os elementos da quarta linha 
-	- L2 - (sendo estes ˙ltimos invertidos):
+	- L2 - (sendo estes √∫ltimos invertidos):
 	
-	M = 4 5 1 3
+	M = 	4 5 1 3
 		8 2 7 4
 		0 2 9 4
 		9 7 8 1
 		
 	Nota:
-	A funÁ„o deve retornar um inteiro, de acordo com os valores de L1 e L2. 
-	Se estes forem v·lidos, retornar 1; caso contr·rio, retornar 0.
+	A fun√ß√£o deve retornar um inteiro, de acordo com os valores de L1 e L2. 
+	Se estes forem v√°lidos, retornar 1; caso contr√°rio, retornar 0.
 	
 ******************************************************************************/
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 
 #include <stdio.h>
 
-//declaraÁ„o de constantes
+//declara√ß√£o de constantes
 
 #define L 4
 #define C 4
 
-//protÛtipos das funÁıes
+//prot√≥tipos das fun√ß√µes
 
 int trocarElementos (int matriz[L][C], int L1, int L2);
 int exibirMatriz(int matriz[L][C]);
 int preencherMatriz(int matriz[L][C]);
 
-//funÁ„o main
+//fun√ß√£o main
 
 void main (){
 	
@@ -61,7 +61,7 @@ void main (){
 	printf("\nEscolha outra linha: ");
 	scanf ("%d" , &L2);
 	
-	//as linhas est„o de indo de 1 ‡ 10
+	//as linhas est√£o de indo de 1 √† 10
 	
 	if ((L1 >= 1 && L1 < L2) && (L2 <= L)){
 	
@@ -90,7 +90,7 @@ void main (){
 	
 }
 
-//implementaÁ„o das funÁıes
+//implementa√ß√£o das fun√ß√µes
 
 //trocando elementos da linha L1 pela linha L2 (inversamente)
 int trocarElementos (int m[L][C], int L1, int L2){
@@ -114,7 +114,7 @@ int trocarElementos (int m[L][C], int L1, int L2){
 	}
 			
 	
-	//passando as informaÁıes da string e enviando para L1 inversamente
+	//passando as informa√ß√µes da string e enviando para L1 inversamente
     for(i=0, j=(C-1); i<C; i++, j--){
     	
     	m[L1-1][i] = string[j];
