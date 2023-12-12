@@ -1,8 +1,4 @@
-/*
-
-QUESTÃO 01: Desenvolver uma função que, dado um arquivo texto, verifique o número de caracteres no mesmo.
-
-*/
+//QUESTÃO 01: Desenvolver uma função que, dado um arquivo texto, verifique o número de caracteres no mesmo.
 
 //importação de bibliotecas
 #include <stdio.h>
