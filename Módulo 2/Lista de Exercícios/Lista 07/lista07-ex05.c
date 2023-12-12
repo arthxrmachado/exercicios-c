@@ -1,27 +1,21 @@
 /*
-	FPR - Fundamentos de Programação
-	2021/1 - Manhã
-	Data: 02/06/2021
-	
-	Lista de Exercícios IX (Arquivos):
-	
-	Questão 05:
-	Faça uma função que, dado um arquivo A contendo números reais, um por linha, crie 
-	um novo arquivo B contendo os mesmos elementos de A, porém ordenados 
-	decrescentemente e sem repetição.
+
+QUESTÃƒO 05: FaÃ§a uma funÃ§Ã£o que, dado um arquivo A contendo nÃºmeros reais, um por linha, crie um novo arquivo B contendo os mesmos elementos de A, porÃ©m 
+ordenados decrescentemente e sem repetiÃ§Ã£o.
+ 
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//declaração de constantes
+//declaraÃ§Ã£o de constantes
 #define TRUE 1
 #define FALSE 0
 
 #define MAXIMO 99999
 #define MINIMO -99999
 
-//declaração de protótipos
+//declaraÃ§Ã£o de protÃ³tipos
 int gerarArquivoOrdenado (char origem[], char destino[]);
 
 //main
@@ -30,15 +24,15 @@ void main ()
 	printf ("Resultado: %d\n", gerarArquivoOrdenado ("teste.txt", "ordenado.txt"));
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 int gerarArquivoOrdenado (char origem[], char destino[])
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	FILE *arqO, *arqD;
 	float maior, numero, ultimo = MAXIMO;
 	int continuar = TRUE;
 	
-	//associar as variáveis do tipo FILE* aos nomes dos arquivos e abri-los
+	//associar as variÃ¡veis do tipo FILE* aos nomes dos arquivos e abri-los
 	arqO = fopen (origem, "r"); //r - read (leitura)
 	arqD = fopen (destino, "w");//w - write (escrita) 
 	
@@ -54,14 +48,14 @@ int gerarArquivoOrdenado (char origem[], char destino[])
 		{
 			continuar = FALSE;			
 			
-			//inicializando 'maior' com um número muito baixo
+			//inicializando 'maior' com um nÃºmero muito baixo
 			maior = MINIMO;
 			
-			//lendo os valores do arquivo até chegar ao seu final
+			//lendo os valores do arquivo atÃ© chegar ao seu final
 			while (fscanf (arqO, "%f", &numero) != EOF)
 			{
-				//verificando se: i. o numero lido é menor do que o ultimo valor colocado 
-				//no novo arquivo; ii. se o numero lido é o maior até o momento!
+				//verificando se: i. o numero lido Ã© menor do que o ultimo valor colocado 
+				//no novo arquivo; ii. se o numero lido Ã© o maior atÃ© o momento!
 				if ((numero < ultimo) && (numero > maior))
 				{
 					maior = numero;
