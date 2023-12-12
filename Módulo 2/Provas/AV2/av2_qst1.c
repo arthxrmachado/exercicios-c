@@ -1,33 +1,25 @@
 /*
-	FPR - 2021/1
-	Prova a compor a AV2 - 06/07/2021
+	FAETERJ-Rio
 	
-	Questão 01 [2,5 pontos]:
+	2FPR - ManhÃ£ - 2021/1
 	
-	a. Desenvolver uma função que, dada uma lista encadeada L do tipo TLista, com seus elementos ordenados 
-	   crescentemente, insira um número inteiro em L, de forma que esta se mantenha ordenada.
-	b. Considerando um arquivo contendo valores inteiros, um por linha, implementar uma função que leia-os e os 
-	   armazene em uma lista encadeada do tipo TLista, de forma que os elementos fiquem ordenados crescentemente.
-
-	Notas:
- 	- O tipo TLista citado é exatamente o tipo que definimos em nossas aulas, em todas as implementações envolvendo 
-	  listas encadeadas.
- 	- A função do item b deve chamar a função do item a.
-
-  		
-	ATENÇÃO: ESTE É APENAS UM ESQUELETO DO PROGRAMA, CABENDO AO ALUNO INCLUIR O QUE ELE ACHAR NECESSÁRIO!
+	Aluno: Arthur LourenÃ§o Machado
+	
+	Data: 06/07/2021   -   AV2
+	
+	QuestÃ£o 01:
 
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 #include <stdlib.h>
 
-//definição de constantes
+//definiÃ§Ã£o de constantes
 #define TRUE 1
 #define FALSE 0
 
-//declaração de tipos
+//declaraÃ§Ã£o de tipos
 typedef struct No
 {
 	int valor;
@@ -36,7 +28,7 @@ typedef struct No
 
 typedef TNo* TLista;
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 int itemA (TLista *L, int numero);
 int itemB (char nomeArq[], TLista *L);
 
@@ -45,10 +37,10 @@ void exibir (TLista L);
 //main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	TLista lista = NULL;
 	
-	//chamando a função
+	//chamando a funÃ§Ã£o
 	if (itemB ("numeros.txt", &lista) == TRUE)
 	{
 		exibir (lista);		
@@ -59,16 +51,16 @@ void main ()
 	}
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 
-/*Dada uma lista encadeada L, com seus elementos ordenados crescentemente, inserir um número inteiro em L, de forma 
+/*Dada uma lista encadeada L, com seus elementos ordenados crescentemente, inserir um nÃºmero inteiro em L, de forma 
 que esta se mantenha ordenada.
 
-Retornará TRUE se a inserção for feita e FALSE, caso contrário.*/
+RetornarÃ¡ TRUE se a inserÃ§Ã£o for feita e FALSE, caso contrÃ¡rio.*/
 int itemA (TLista *L, int numero)
 {
 
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	TLista aux1, aux2, novo;
 
     aux1 = *L;
@@ -119,18 +111,18 @@ int itemA (TLista *L, int numero)
     
 }
 
-/*Função que lê os números existentes em um arquivo e os transfere para uma lista encadeada, de forma que os 
+/*FunÃ§Ã£o que lÃª os nÃºmeros existentes em um arquivo e os transfere para uma lista encadeada, de forma que os 
 elementos da lista fiquem ordenados crescentemente.*/
 int itemB (char nomeArq[], TLista *L)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	FILE *arq;
 	int numero;
 	
 	//abertura do arquivo para leitura
 	arq = fopen (nomeArq, "r");
 	
-	//testando se o arquivo foi ou não aberto
+	//testando se o arquivo foi ou nÃ£o aberto
 	if (arq == NULL){
 		
 		return 0;
@@ -156,10 +148,10 @@ int itemB (char nomeArq[], TLista *L)
 
 void exibir (TLista L)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	TLista aux;
 	
-	//verificando se a lista está vazia
+	//verificando se a lista estÃ¡ vazia
 	if (L == NULL)   // if (!L)
 	{
 		printf ("Lista vazia!\n");
@@ -168,16 +160,16 @@ void exibir (TLista L)
 	{
 		printf ("Lista: ");
 		
-		//iniciando aux com o endereço do primeiro nó
+		//iniciando aux com o endereÃ§o do primeiro nÃ³
 		aux = L;
 		
-		//percorrendo a lista até o seu final
+		//percorrendo a lista atÃ© o seu final
 		while (aux != NULL)    //while (aux)
 		{
 			//exibindo cada elemento da lista
 			printf ("%d ", aux->valor);
 			
-			//andando com 'aux' para o próximo nó
+			//andando com 'aux' para o prÃ³ximo nÃ³
 			aux = aux->prox;
 		}
 	}
