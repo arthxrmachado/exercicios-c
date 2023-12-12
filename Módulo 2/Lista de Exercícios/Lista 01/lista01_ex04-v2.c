@@ -1,54 +1,49 @@
-/******************************************************************************
-	FAETERJ-Rio
-	2FPR - Manh„ - 2021/1
-	Professor Leonardo Vianna
+/*
+
+Quest√£o 4: Inverter os elementos de um vetor.
 	
-	Data: 10/03/2021   -   Aula de revis„o	(Vetores)
-	
-	ExercÌcio 4: Inverter os elementos de um vetor.
-	
-		Exemplo: 
+Exemplo: 
 		
-			v (antes da invers„o):  4  7  2  1  6
-			v (depois da invers„o): 6  1  2  7  4
+v (antes da invers√£o):  4  7  2  1  6
+v (depois da invers√£o): 6  1  2  7  4
 
-******************************************************************************/
+*/
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
-//declaraÁ„o de constantes
+//declara√ß√£o de constantes
 #define TAM 7
 
-//protÛtipos das funÁıes
+//prot√≥tipos das fun√ß√µes
 void preencher (int vetor[], int tamanho);
 void exibir (int vetor[], int tamanho);
 void trocar (int vetor[], int tamanho);
 
-//funÁ„o main
+//fun√ß√£o main
 void main ()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int v[TAM];
 	
-	//chamando a funÁ„o para preencher o vetor 'v'
+	//chamando a fun√ß√£o para preencher o vetor 'v'
 	preencher (v, TAM);
 	
-	//exibindo o vetor 'v' antes da invers„o
+	//exibindo o vetor 'v' antes da invers√£o
 	exibir (v, TAM);
 	
 	//invertendo os elementos do vetor
 	trocar (v, TAM);
 	
-	//exibindo o vetor 'v' apÛs a invers„o
+	//exibindo o vetor 'v' ap√≥s a invers√£o
 	exibir (v, TAM);
 
 }
 
-//implementaÁ„o das funÁıes
+//implementa√ß√£o das fun√ß√µes
 void trocar (int vetor[], int tamanho)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i, j, aux;
 	
 	//fazendo a troca dos elementos
@@ -67,21 +62,21 @@ void preencher(int vetor[], int tamanho)
     
     srand (time(NULL));
     
-    //corpo da funÁ„o
+    //corpo da fun√ß√£o
     for(i = 0; i < tamanho; i++)
 	{
-		vetor[i] = 1 + rand()%100;  //gerando n˙meros aleatÛrios no intervalo de 1 a 100
+		vetor[i] = 1 + rand()%100;  //gerando n√∫meros aleat√≥rios no intervalo de 1 a 100
     }
 }
 
 void exibir (int vetor[], int tamanho)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;
 	
 	printf ("\nElementos do vetor: ");
 	
-	//percorrendo todas as posiÁıes do vetor
+	//percorrendo todas as posi√ß√µes do vetor
 	for (i=0;i<tamanho;i++)
 	{
 		printf ("%d  ", vetor[i]);
