@@ -1,37 +1,27 @@
-/********************************************************************************************
+/*
+QUEST√ÉO 04: Pede-se a implementa√ß√£o de uma fun√ß√£o recursiva que exiba os n primeiros termos de uma PG (Progress√£o Geom√©trica), onde 'A1' √© o seu primeiro 
+termo e 'Q' a raz√£o.
 
-	FPR - Manh„
-	Professor Leonardo Vianna
-	2021/1
-	Data: 07/04/2021
+Observa√ß√£o: uma PG consiste em uma sequ√™ncia de valores, iniciadas pelo valor a1. Os demais elementos s√£o definidos como o anterior multiplicado pela raz√£o.
 	
-	Lista de ExercÌcios V - Recursividade
+Exemplo:
 	
-	ExercÌcio 04: Pede-se a implementaÁ„o de uma funÁ„o recursiva 
-	que exiba os n primeiros termos de uma PG (Progress„o GeomÈtrica),
-	onde a1 È o seu primeiro termo e q a raz„o.
+a1 = 10   n = 5   q = 3
 
-	ObservaÁ„o: uma PG consiste em uma sequÍncia de valores, 
-	iniciadas pelo valor a1. Os demais elementos s„o definidos 
-	como o anterior multiplicado pela raz„o.
-	
-	Exemplo:
-	
-		a1 = 10   n = 5   q = 3
-		PG: 10  30  90  270  810
+PG: 10  30  90  270  810
 		
 *******************************************************************************************/
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
-//protÛtipos das funÁıes
+//prot√≥tipos das fun√ß√µes
 void PG (int a1, int n, int q);
 
-//funÁ„o main
+//fun√ß√£o main
 void main ()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int termo1, razao, quant;
 	
 	//leitura dos dados
@@ -44,11 +34,11 @@ void main ()
 	printf ("Quantidade de elementos: ");
 	scanf ("%d", &quant);
 	
-	//chamando a funÁ„o	
+	//chamando a fun√ß√£o	
   	PG (termo1, quant, razao);
 }
 
-//implementaÁ„o das funÁıes
+//implementa√ß√£o das fun√ß√µes
 void PG (int a1, int n, int q)
 {
 	if (n > 0)
