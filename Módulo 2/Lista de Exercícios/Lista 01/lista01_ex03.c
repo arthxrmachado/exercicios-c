@@ -1,4 +1,4 @@
-// Questão 3: Preencher um vetor com números aleatórios.
+// QUESTÃO 03: Preencher um vetor com números aleatórios.
 
 //importação de bibliotecas
 #include <stdio.h>
