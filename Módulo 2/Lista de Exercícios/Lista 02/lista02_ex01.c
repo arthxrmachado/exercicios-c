@@ -1,25 +1,13 @@
-/******************************************************************************
-	FAETERJ-Rio
-	2FPR - Manhã - 2021/1
-	Professor Leonardo Vianna
-	
-	Data: 24/03/2021   -   Matrizes
-	
-	Lista de Exercícios IV
-	
-	QUESTÃO 01: Faça um função que, dada uma matriz M8×5 de 
-	reais, gere a matriz Mt, sua transposta.
+// QUESTÃƒO 01: FaÃ§a um funÃ§Ã£o que, dada uma matriz M8Ã—5 de reais, gere a matriz Mt, sua transposta.
 
-******************************************************************************/
-
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//declaração de constantes
+//declaraÃ§Ã£o de constantes
 #define L 8
 #define C 5
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 void preencherMatriz(float matriz[L][C]);
 void exibirMatriz(float matriz[L][C]);
 
@@ -28,7 +16,7 @@ void gerarT(float matriz[L][C],float mT[C][L]);
 //main
 void main()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	float m[L][C];
 	float matrizT[C][L];
 	int i,j;
