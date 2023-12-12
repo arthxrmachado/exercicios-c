@@ -1,28 +1,29 @@
-/******************************************************************************
+/*
+
 	FAETERJ-Rio
 	
-	2FPR - Manh„ - 2021/1
+	2FPR - Manh√£ - 2021/1
 	
-	Aluno: Arthur LourenÁo Machado
+	Aluno: Arthur Louren√ßo Machado
 	
 	Data: 05/05/2021   -   AV1
 	
-	Quest„o 02:	
+	Quest√£o 02:
+ 
+*/
 
-******************************************************************************/
-
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 #include <string.h>
 
-//protÛtipo das funÁıes
+//prot√≥tipo das fun√ß√µes
 
 int testarSenha (char s[]);
 
-//funÁ„o main
+//fun√ß√£o main
 void main ()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	char s[30];
 	
 	//leitura da string
@@ -37,7 +38,7 @@ void main ()
 
 int testarSenha (char s[]){
 	
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	
 	int i, j, cont=0, contMaiusculo=0, contMinusculo=0, repeticao=0;
 	
