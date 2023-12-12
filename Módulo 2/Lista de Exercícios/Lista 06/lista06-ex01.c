@@ -1,34 +1,26 @@
 /*
-	FPR - Manh„
-	
-	Data: 12/05/2021
-	
-	Lista de ExercÌcios VIII - Structs
-	
-	Quest„o 01:
-	Uma loja de automÛveis mantÈm os carros ‡ venda sob a forma de um vetor de structs 
-	contendo as seguintes informaÁıes, para cada veÌculo: placa, modelo, marca, cor, 
-	quilometragem, ano modelo/fabricaÁ„o (deve ser um struct), valor e tipo (usado ou 
-	0 km, conforme o valor do campo quilometragem). 
 
-	Pede-se a declaraÁ„o de uma vari·vel que represente o estoque de veÌculos da 
-	loja, incluindo todas as declaraÁıes de tipos que possam ser necess·rias.
+QUEST√ÉO 01: Uma loja de autom√≥veis mant√©m os carros √† venda sob a forma de um vetor de structs contendo as seguintes informa√ß√µes, para cada ve√≠culo: 
+placa, modelo, marca, cor, quilometragem, ano modelo/fabrica√ß√£o (deve ser um struct), valor e tipo (usado ou 0 km, conforme o valor do campo quilometragem). 
 
-	AlÈm disso, implementar as seguintes funÁıes:
-	i.	 Exibir todos os carros do modelo m, ano de fabricaÁ„o entre a1 e a2 
-	     (inclusive), com valor n„o superior a x reais;
-	ii.	 Reajustar os valores de todos os carros 0 km, considerando um aumento de 2.5%;
-	iii. Retirar do estoque um determinado veÌculo, dada a sua placa.
+Pede-se a declara√ß√£o de uma vari√°vel que represente o estoque de ve√≠culos da loja, incluindo todas as declara√ß√µes de tipos que possam ser necess√°rias.
+
+Al√©m disso, implementar as seguintes fun√ß√µes:
+
+i. Exibir todos os carros do modelo m, ano de fabrica√ß√£o entre a1 e a2 (inclusive), com valor n√£o superior a x reais;
+ii. Reajustar os valores de todos os carros 0 km, considerando um aumento de 2.5%;
+iii. Retirar do estoque um determinado ve√≠culo, dada a sua placa.
+
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
-//declaraÁ„o de constantes
+//declara√ß√£o de constantes
 #define TRUE 1
 #define FALSE 0
 
-//declaraÁ„o de tipos
+//declara√ß√£o de tipos
 typedef struct {
 	int fabricacao, modelo;
 } TAno;
@@ -44,7 +36,7 @@ typedef struct {
 	char tipo[6];	
 } TCarro;
 
-//protÛtipos das funÁıes
+//prot√≥tipos das fun√ß√µes
 void exibirCarros (TCarro loja[], int quant, char m[20], int a1, int a2, float x);
 void reajusar0km (TCarro loja[], int quant);
 int  retirarDoEstoque (TCarro loja[], int *quant, char placa[9]);
@@ -56,7 +48,7 @@ void main ()
 	
 }
 
-//implementaÁ„o das funÁıes
+//implementa√ß√£o das fun√ß√µes
 
 //exibir dados de um carro
 void exibirDadosCarro (TCarro carro)
@@ -69,11 +61,11 @@ void exibirDadosCarro (TCarro carro)
 	printf ("\nTipo: %s\n", carro.tipo);
 }
 
-//Exibir todos os carros do modelo m, ano de fabricaÁ„o entre a1 e a2 (inclusive), 
-//com valor n„o superior a x reais
+//Exibir todos os carros do modelo m, ano de fabrica√ß√£o entre a1 e a2 (inclusive), 
+//com valor n√£o superior a x reais
 void exibirCarros (TCarro loja[], int quant, char m[20], int a1, int a2, float x)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;
 	
 	//varrendo o vetor de carros
@@ -91,13 +83,13 @@ void exibirCarros (TCarro loja[], int quant, char m[20], int a1, int a2, float x
 //Reajustar os valores de todos os carros 0 km, considerando um aumento de 2.5%
 void reajusar0km (TCarro loja[], int quant)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;
 	
 	//varrendo o vetor de carros
 	for (i=0;i<quant;i++)
 	{
-		//verificando se È um carro 0 km
+		//verificando se √© um carro 0 km
 		if (loja[i].km == 0)
 		{
 			loja[i].valor += (loja[i].valor * 0.025); //0.025 = 2,5%
@@ -106,22 +98,22 @@ void reajusar0km (TCarro loja[], int quant)
 	}
 }
 	
-//Retirar do estoque um determinado veÌculo, dada a sua placa
+//Retirar do estoque um determinado ve√≠culo, dada a sua placa
 int  retirarDoEstoque (TCarro loja[], int *quant, char placa[9])
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;
 	
 	//varrendo o vetor
 	for (i=0;i<*quant;i++)
 	{
-		//verificando se a placa passada por par‚metro foi encontrada
+		//verificando se a placa passada por par√¢metro foi encontrada
 		if (strcmp(loja[i].placa,placa) == 0)
 		{
-			//removendo o carro cuja a placa foi passada por par‚metro
+			//removendo o carro cuja a placa foi passada por par√¢metro
 			loja[i] = loja[(*quant)-1];
-			/*observaÁ„o: notem que a cÛpia foi feita de todo o struct, de uma ˙nica
-			  vez. Isto È, n„o È necess·rio copiar campo a campo!*/			
+			/*observa√ß√£o: notem que a c√≥pia foi feita de todo o struct, de uma √∫nica
+			  vez. Isto √©, n√£o √© necess√°rio copiar campo a campo!*/			
 			
 			(*quant)--;
 			
@@ -129,6 +121,6 @@ int  retirarDoEstoque (TCarro loja[], int *quant, char placa[9])
 		}
 	}
 	
-	//carro n„o encontrado na loja
+	//carro n√£o encontrado na loja
 	return FALSE;
 }
