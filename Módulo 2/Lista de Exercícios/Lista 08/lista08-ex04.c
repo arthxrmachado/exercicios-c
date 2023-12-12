@@ -1,24 +1,19 @@
 /*
-	FPR - Manhã
-	Data: 30/06/2021
-	
-	Lista de Exercícios X
-	
-	QUESTÃO 04:
-	Implementar uma função que, dadas duas listas dinâmicas do tipo TLista, 
-	verifique se estas são iguais; isto é, contêm os mesmos elementos, na 
-	mesma ordem.
+
+QUESTÃƒO 04: Implementar uma funÃ§Ã£o que, dadas duas listas dinÃ¢micas do tipo TLista,  verifique se estas sÃ£o iguais; isto Ã©, contÃªm os mesmos elementos, na 
+mesma ordem.
+
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 #include <stdlib.h>
 
-//declaração de constantes
+//declaraÃ§Ã£o de constantes
 #define FALSE 0
 #define TRUE 1
 
-//declaração de tipos
+//declaraÃ§Ã£o de tipos
 typedef struct No {
 	int valor;			//no caso, representando uma lista de inteiros
 	struct No* prox;
@@ -26,7 +21,7 @@ typedef struct No {
 
 typedef TNo* TLista;
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 int iguais (TLista L1, TLista L2);
 
 int inserir (TLista* L, int numero);
@@ -35,7 +30,7 @@ void exibir (TLista L);
 //main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	TLista lista1 = NULL, 
 	       lista2 = NULL,
 		   lista3 = NULL;
@@ -60,7 +55,7 @@ void main ()
 	inserir (&lista3, 8);
 	inserir (&lista3, 1);
 
-	//exibindo as três listas
+	//exibindo as trÃªs listas
 	printf ("Lista1:\n");
 	exibir (lista1);
 	
@@ -70,7 +65,7 @@ void main ()
 	printf ("\n\nLista3:\n");
 	exibir (lista3);
 	
-	//verificando se lista1 e lista2 são iguais (sabemos que são)
+	//verificando se lista1 e lista2 sÃ£o iguais (sabemos que sÃ£o)
 	if (iguais (lista1, lista2) == TRUE)
 	{
 		printf ("\n\nAs listas lista1 e lista2 sao iguais!\n");
@@ -80,7 +75,7 @@ void main ()
 		printf ("\nAs listas lista1 e lista2 nao sao iguais!\n");
 	}
 	
-	//verificando se lista1 e lista3 são iguais (sabemos que não são)
+	//verificando se lista1 e lista3 sÃ£o iguais (sabemos que nÃ£o sÃ£o)
 	if (iguais (lista1, lista3) == TRUE)
 	{
 		printf ("\nAs listas lista1 e lista3 sao iguais!\n");
@@ -91,10 +86,10 @@ void main ()
 	}
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 int iguais (TLista L1, TLista L2)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	TLista aux1, aux2;
 	
 	//inicializando os auxiliares
@@ -137,7 +132,7 @@ int iguais (TLista L1, TLista L2)
 		return TRUE;
 	}
 	
-	if (aux1 == aux2)  //implicitamente, testando se os dois são NULL
+	if (aux1 == aux2)  //implicitamente, testando se os dois sÃ£o NULL
 	{
 		return TRUE;
 	}
@@ -149,26 +144,26 @@ int iguais (TLista L1, TLista L2)
 
 int inserir (TLista* L, int numero)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	TLista aux;
 	
-	//Passo1: alocar memória para o novo elemento
+	//Passo1: alocar memÃ³ria para o novo elemento
 	aux = (TLista) malloc (sizeof(TNo));
 	
-	//testar se a memória foi alocada
+	//testar se a memÃ³ria foi alocada
 	if (aux == NULL) //if (!aux)
 	{
 		return FALSE;
 	}
 	else
 	{
-		//Passo2: Armazenar na memória alocada o novo valor						
+		//Passo2: Armazenar na memÃ³ria alocada o novo valor						
 		aux->valor = numero;
 		
-		//Passo3: Fazer o prox do novo nó apontar para o antigo primeiro elemento da lista		
+		//Passo3: Fazer o prox do novo nÃ³ apontar para o antigo primeiro elemento da lista		
 		aux->prox = *L;
 		
-		//Passo4: Mandar L apontar para o novo nó			
+		//Passo4: Mandar L apontar para o novo nÃ³			
 		*L = aux;
 		
 		//retornando sucesso
@@ -178,10 +173,10 @@ int inserir (TLista* L, int numero)
 
 void exibir (TLista L)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	TLista aux;
 	
-	//verificando se a lista está vazia
+	//verificando se a lista estÃ¡ vazia
 	if (L == NULL)   // if (!L)
 	{
 		printf ("Lista vazia!\n");
@@ -190,16 +185,16 @@ void exibir (TLista L)
 	{
 		printf ("Lista: ");
 		
-		//iniciando aux com o endereço do primeiro nó
+		//iniciando aux com o endereÃ§o do primeiro nÃ³
 		aux = L;
 		
-		//percorrendo a lista até o seu final
+		//percorrendo a lista atÃ© o seu final
 		while (aux != NULL)    //while (aux)
 		{
 			//exibindo cada elemento da lista
 			printf ("%d ", aux->valor);
 			
-			//andando com 'aux' para o próximo nó
+			//andando com 'aux' para o prÃ³ximo nÃ³
 			aux = aux->prox;
 		}
 	}
