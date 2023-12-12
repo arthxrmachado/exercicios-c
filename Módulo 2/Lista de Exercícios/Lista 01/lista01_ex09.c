@@ -1,4 +1,4 @@
-// Questão 9: Busca binária de um elemento em um vetor. O(log2n)
+// QUESTÃO 09: Busca binária de um elemento em um vetor. O(log2n)
 
 //importação de bibliotecas
 #include <stdio.h>
