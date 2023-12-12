@@ -1,18 +1,15 @@
 /*
-	FPR - 15/05/2021 (aula extra)
-	
-	Lista de Exercícios VII (strings + recursividade)
-	
-	Questão 06:
-	Implementar uma função recursiva que, dados uma string str e um caracter ch, 
-	remova de str todas as ocorrências de ch, retornando o total de remoções realizadas.
+
+QUESTÃƒO 06: Implementar uma funÃ§Ã£o recursiva que, dados uma string str e um caracter ch, remova de str todas as ocorrÃªncias de ch, retornando o total de
+remoÃ§Ãµes realizadas.
+
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 #include <string.h>
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 int removerCaracteres (char s[], char ch, int pos);
 void deslocarCaracteres (char s[], int pos);
 
@@ -28,7 +25,7 @@ void main ()
 	printf ("String apos a remocao: %s\nQuantidade de remocoes: %d", str, quant);
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 
 void deslocarCaracteres (char s[], int pos)
 {
@@ -49,7 +46,7 @@ int removerCaracteres (char s[], char ch, int pos)
 	{
 		if (s[pos] == ch)
 		{
-			//deslocar para a esquerda os caracteres da posição 'pos' em diante
+			//deslocar para a esquerda os caracteres da posiÃ§Ã£o 'pos' em diante
 			deslocarCaracteres (s, pos);
 			
     		return 1 + removerCaracteres (s, ch, pos);
