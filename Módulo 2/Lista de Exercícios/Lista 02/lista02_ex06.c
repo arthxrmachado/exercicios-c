@@ -1,40 +1,25 @@
-/********************************************************************************************
+/*
+QUESTÃƒO 06: Considere uma loja que mantÃ©m em uma matriz o total vendido por cada funcionÃ¡rio pelos diversos meses do ano. Ou seja, uma matriz de 12 linhas 
+(uma por mÃªs) e 10 colunas (10 funcionÃ¡rios). Pede-se o desenvolvimento de uma funÃ§Ã£o para cada item abaixo:	
+	
+a. Calcular o total vendido durante o ano;
+b. Dado um mÃªs fornecido pelo usuÃ¡rio, determinar o total vendido nesse mÃªs;
+c. Dado um funcionÃ¡rio fornecido pelo usuÃ¡rio, determinar o total vendido por ele durante o ano;
+d. Determinar o mÃªs com maior Ã­ndice de vendas;
+e. Determinar o funcionÃ¡rio que menos vendeu durante o ano.
 
-	FPR - Manhã
-	Professor Leonardo Vianna
-	2021/1
-	Data: 14/04/2021
-	
-	Matrizes
-	
-	Lista de Exercícios IV - Exercício 6
-	
-	Considere uma loja que mantém em uma matriz o total vendido 
-	por cada funcionário pelos diversos meses do ano. Ou seja, 
-	uma matriz de 12 linhas (uma por mês) e 10 colunas (10 
-	funcionários). Pede-se o desenvolvimento de uma função para 
-	cada item abaixo:	
-	
-	a. Calcular o total vendido durante o ano;
-	b. Dado um mês fornecido pelo usuário, determinar o total 
-	vendido nesse mês;
-	c. Dado um funcionário fornecido pelo usuário, determinar 
-	o total vendido por ele durante o ano;
-	d. Determinar o mês com maior índice de vendas;
-	e. Determinar o funcionário que menos vendeu durante o ano.
+*/
 
-*******************************************************************************************/
-
-//definição de constantes
+//definiÃ§Ã£o de constantes
 #define MESES 12
 #define FUNC  10
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 float calcularTotal (float vendas[MESES][FUNC]);
 float calcularVendasPorMes (float vendas[MESES][FUNC], int mes);
 float calcularVendasPorFunc (float vendas[MESES][FUNC], int funcionario);
@@ -44,10 +29,10 @@ int   calcularFuncMenorVenda (float vendas[MESES][FUNC]);
 void preencheAleatoriamente (float vendas[MESES][FUNC]);
 void exibir (float vendas[MESES][FUNC]);
 
-//função main
+//funÃ§Ã£o main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	float v[MESES][FUNC];
 	int mes, funcionario;
 	
@@ -58,35 +43,35 @@ void main ()
 	//Exibindo o total vendido na loja durante o ano
 	printf ("\n\nTotal vendido = R$ %.2f\n", calcularTotal (v));
 
-	//Verificando o total vendido em determinado mês
+	//Verificando o total vendido em determinado mÃªs
 	printf ("\nEntre com um mes (1..12): ");
 	scanf ("%d", &mes);
 	
 	printf ("\nTotal vendido no mes %d foi R$ %.2f\n", mes, calcularVendasPorMes (v, mes));
 
-	//Verificando o total vendido por determinado funcionário
-	printf ("\nEntre com o código de um funcionário (1..10): ");
+	//Verificando o total vendido por determinado funcionÃ¡rio
+	printf ("\nEntre com o cÃ³digo de um funcionÃ¡rio (1..10): ");
 	scanf ("%d", &funcionario);
 	
 	printf ("\nTotal vendido pelo funcionario %d foi R$ %.2f\n", funcionario, calcularVendasPorFunc (v, funcionario));
 
-	//Exibindo o mês de maior índice de vendas
+	//Exibindo o mÃªs de maior Ã­ndice de vendas
 	printf ("\nO mes com maior indice de vendas foi %d\n", calcularMesMaiorVenda (v));
 	
-	//Exibindo o funcionário com menor índice de vendas
+	//Exibindo o funcionÃ¡rio com menor Ã­ndice de vendas
 	printf ("\nO funcionario com menor indice de vendas foi %d\n", calcularFuncMenorVenda (v));
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 
 //a. Calcular o total vendido durante o ano.
 float calcularTotal (float vendas[MESES][FUNC])
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	float soma = 0;
 	int i, j;
 	
-	//percorrendo toda a matriz para fazer o somatório dos valores
+	//percorrendo toda a matriz para fazer o somatÃ³rio dos valores
 	for (i=0;i<MESES;i++)
 	{
 		for (j=0;j<FUNC;j++)
@@ -99,18 +84,18 @@ float calcularTotal (float vendas[MESES][FUNC])
 	return soma;
 }
 
-//b. Dado um mês fornecido pelo usuário, determinar o total 
-//vendido nesse mês;
+//b. Dado um mÃªs fornecido pelo usuÃ¡rio, determinar o total 
+//vendido nesse mÃªs;
 float calcularVendasPorMes (float vendas[MESES][FUNC], int mes)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	float soma = 0;
 	int j;
 
-	//atualizando a variável mes: de 1..12 para 0..11
+	//atualizando a variÃ¡vel mes: de 1..12 para 0..11
 	mes--;
 	
-	//percorrendo toda a linha referente ao mês passado por parâmetro
+	//percorrendo toda a linha referente ao mÃªs passado por parÃ¢metro
 	for (j=0;j<FUNC;j++)
 	{
 		soma += vendas[mes][j];
@@ -120,18 +105,18 @@ float calcularVendasPorMes (float vendas[MESES][FUNC], int mes)
 	return soma;
 }
 
-//c. Dado um funcionário fornecido pelo usuário, determinar 
+//c. Dado um funcionÃ¡rio fornecido pelo usuÃ¡rio, determinar 
 //o total vendido por ele durante o ano;
 float calcularVendasPorFunc (float vendas[MESES][FUNC], int funcionario)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	float soma = 0;
 	int i;
 
-	//atualizando a variável funcionario: de 1..10 para 0..9
+	//atualizando a variÃ¡vel funcionario: de 1..10 para 0..9
 	funcionario--;
 	
-	//percorrendo toda a coluna referente ao funcionário passado por parâmetro
+	//percorrendo toda a coluna referente ao funcionÃ¡rio passado por parÃ¢metro
 	for (i=0;i<MESES;i++)
 	{
 		soma += vendas[i][funcionario];
@@ -141,20 +126,20 @@ float calcularVendasPorFunc (float vendas[MESES][FUNC], int funcionario)
 	return soma;	
 }
 
-//d. Determinar o mês com maior índice de vendas;
+//d. Determinar o mÃªs com maior Ã­ndice de vendas;
 int   calcularMesMaiorVenda (float vendas[MESES][FUNC])
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	float total, maior = -1;
 	int mes, maiorMes;
 
 	//percorrendo todos os meses do ano	
 	for (mes=1;mes<=MESES;mes++)
 	{
-		//calculando o total vendido em cada mês do ano
+		//calculando o total vendido em cada mÃªs do ano
 		total = calcularVendasPorMes (vendas, mes);
 
-		//verificando se é o mês de maior índice de vendas		
+		//verificando se Ã© o mÃªs de maior Ã­ndice de vendas		
 		if (total > maior)
 		{
 			maior = total;
@@ -162,25 +147,25 @@ int   calcularMesMaiorVenda (float vendas[MESES][FUNC])
 		}
 	}
 	
-	//retornando o mês de maior índice de vendas
+	//retornando o mÃªs de maior Ã­ndice de vendas
 	return maiorMes;  
 }
 
 
-//e. Determinar o funcionário que menos vendeu durante o ano.
+//e. Determinar o funcionÃ¡rio que menos vendeu durante o ano.
 int   calcularFuncMenorVenda (float vendas[MESES][FUNC])
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	float total, menor = 10000000;
 	int funcionario, menorFuncionario;
 
-	//percorrendo todos os funcionários
+	//percorrendo todos os funcionÃ¡rios
 	for (funcionario=1;funcionario<=FUNC;funcionario++)
 	{
-		//calculando o total vendido por cada funcionário durante o ano
+		//calculando o total vendido por cada funcionÃ¡rio durante o ano
 		total = calcularVendasPorFunc (vendas, funcionario);
 
-		//verificando se é o funcionário com menor índice de vendas		
+		//verificando se Ã© o funcionÃ¡rio com menor Ã­ndice de vendas		
 		if (total < menor)
 		{
 			menor = total;
@@ -188,14 +173,14 @@ int   calcularFuncMenorVenda (float vendas[MESES][FUNC])
 		}
 	}
 	
-	//retornando o funcionário de menor índice de vendas
+	//retornando o funcionÃ¡rio de menor Ã­ndice de vendas
 	return menorFuncionario; 
 }
 
-//preenche a matriz com números aleatórios
+//preenche a matriz com nÃºmeros aleatÃ³rios
 void preencheAleatoriamente (float vendas[MESES][FUNC])
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i, j;
 	
 	srand (time(NULL));
@@ -213,7 +198,7 @@ void preencheAleatoriamente (float vendas[MESES][FUNC])
 
 void exibir (float vendas[MESES][FUNC])
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i, j;
 	
 	//percorrendo toda a matriz
