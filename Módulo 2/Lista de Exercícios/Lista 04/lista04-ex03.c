@@ -1,16 +1,10 @@
 /*
-	FPR - 15/05/2021 (aula extra)
-	
-	Lista de Exercícios VI (strings)
-	
-	Questão 03:
-	Desenvolver uma função que, dada uma string s, crie uma substring que inicie 
-	na posição p de s e contenha n caracteres.
 
-	Observações: 
-	i. se p e/ou n forem inválidos, a substring será vazia; 
-	ii) se s não possuir n caracteres além de p, a substring a ser criada começará 
-	em p e terminará no final de s.
+QUESTÃƒO 03: Desenvolver uma funÃ§Ã£o que, dada uma string s, crie uma substring que inicie na posiÃ§Ã£o p de s e contenha n caracteres.
+
+ObservaÃ§Ãµes: 
+i. se p e/ou n forem invÃ¡lidos, a substring serÃ¡ vazia; 
+ii) se s nÃ£o possuir n caracteres alÃ©m de p, a substring a ser criada comeÃ§arÃ¡ em p e terminarÃ¡ no final de s.
 	
 	Exemplos:
 	
@@ -36,20 +30,21 @@
 	      p = 5
 	      n = 15
 	      
-	      substring: "ITMOS"	
+	      substring: "ITMOS"
+
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 #include <string.h>
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 void substring (char s[], int p, int n, char subs[]);
 
 //main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	char string[20], sub[20];
 	
 	strcpy (string, "ALGORITMOS");
@@ -59,7 +54,7 @@ void main ()
 	printf ("\n\nstring: %s\nsub: %s", string, sub);
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 void substring (char s[], int p, int n, char subs[])
 {
 	int i, j;
