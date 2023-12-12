@@ -1,21 +1,9 @@
-/********************************************************************************************
+// QUESTÃƒO 04: Desenvolver uma funÃ§Ã£o recursiva que, dada uma string, exiba-a invertida.
 
-	FPR - Manhã
-	Professor Leonardo Vianna
-	2021/1
-	Data: 28/04/2021
-	
-	Lista de Exercícios VII: Strings + recursividade
-	
-	Questão 04: Desenvolver uma função recursiva que, dada uma string, exiba-a 
-	invertida.
-
-*******************************************************************************************/
-
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 void exibir_aux (char *s, int pos);
 void exibir (char *s);
 
