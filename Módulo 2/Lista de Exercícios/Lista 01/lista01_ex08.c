@@ -1,4 +1,4 @@
-// Questão 8: Busca linear de um elemento em um vetor ordenado. O(n)
+// QUESTÃO 08: Busca linear de um elemento em um vetor ordenado. O(n)
 
 //importação de bibliotecas
 #include <stdio.h>
