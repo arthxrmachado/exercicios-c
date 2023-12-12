@@ -1,6 +1,4 @@
-/*
-Questão 2: Preencher um vetor com números dados pelo usuário.
-*/
+// Questão 2: Preencher um vetor com números dados pelo usuário.
 
 //importação de bibliotecas
 #include <stdio.h>
