@@ -1,23 +1,13 @@
-/*
-	FPR - Fundamentos de Programação
-	2021/1 - Manhã
-	Data: 02/06/2021
-	
-	Lista de Exercícios IX (Arquivos):
-	
-	Questão 04:
-	Desenvolver uma função que, dado um arquivo texto contendo números, determine se 
-	estes encontram-se ordenados crescentemente.
-*/
+// QUESTÃƒO 04: Desenvolver uma funÃ§Ã£o que, dado um arquivo texto contendo nÃºmeros, determine se estes encontram-se ordenados crescentemente.
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//declaração de constantes
+//declaraÃ§Ã£o de constantes
 #define TRUE 1
 #define FALSE 0
 
-//declaração de protótipos
+//declaraÃ§Ã£o de protÃ³tipos
 int verificaOrdenacao (char nomeArq[]);
 
 //main
@@ -26,10 +16,10 @@ void main ()
 	printf ("Resultado: %d\n", verificaOrdenacao ("teste.txt"));
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 int verificaOrdenacao (char nomeArq[])
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	FILE *arquivo;
 	float anterior, atual;
 	
@@ -46,13 +36,13 @@ int verificaOrdenacao (char nomeArq[])
 		//lendo o primeiro valor do arquivo
 		fscanf (arquivo, "%f", &anterior);
 		
-		//lendo os demais, até chegar ao final do arquivo
+		//lendo os demais, atÃ© chegar ao final do arquivo
 		while (fscanf (arquivo, "%f", &atual) != EOF)
 		{
-			//comparando o número que acabou de ler com o anterior
+			//comparando o nÃºmero que acabou de ler com o anterior
 			if (atual < anterior)
 			{
-				//não esquecer de fechar o arquivo, mesmo quando concluir que ele não está ordenado
+				//nÃ£o esquecer de fechar o arquivo, mesmo quando concluir que ele nÃ£o estÃ¡ ordenado
 				fclose (arquivo);
 				
 				return FALSE;
@@ -67,7 +57,7 @@ int verificaOrdenacao (char nomeArq[])
 		//fechando o arquivo
 		fclose (arquivo);
 		
-		//retornando TRUE para dizer que o arquivo está ordenado
+		//retornando TRUE para dizer que o arquivo estÃ¡ ordenado
 		return TRUE;
 	}	
 }
