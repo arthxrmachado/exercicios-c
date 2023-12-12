@@ -1,23 +1,14 @@
-/*
-	FPR - Manh„
-	Data: 30/06/2021
-	
-	Lista de ExercÌcios X
-	
-	QUEST√O 06:
-	Desenvolver uma funÁ„o que, dada uma lista L1, crie uma nova lista L2, 
-	cÛpia de L1.
-*/
+// QUEST√ÉO 06: Desenvolver uma fun√ß√£o que, dada uma lista L1, crie uma nova lista L2, c√≥pia de L1.
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 #include <stdlib.h>
 
-//declaraÁ„o de constantes
+//declara√ß√£o de constantes
 #define TRUE 1
 #define FALSE 0
 
-//declaraÁ„o de tipos
+//declara√ß√£o de tipos
 typedef struct No {
 	int valor;			//no caso, representando uma lista de inteiros
 	struct No* prox;
@@ -25,7 +16,7 @@ typedef struct No {
 
 typedef TNo* TLista;
 
-//protÛtipos das funÁıes
+//prot√≥tipos das fun√ß√µes
 void copiar (TLista L1, TLista *L2);
 
 int inserir (TLista* L, int numero);
@@ -34,7 +25,7 @@ void exibir (TLista L);
 //main
 void main ()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	TLista lista1 = NULL, 
 	       lista2 = NULL;
 	
@@ -67,29 +58,29 @@ void main ()
 	exibir (lista2);
 }
 
-//implementaÁ„o das funÁıes
+//implementa√ß√£o das fun√ß√µes
 int inserir (TLista* L, int numero)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	TLista aux;
 	
-	//Passo1: alocar memÛria para o novo elemento
+	//Passo1: alocar mem√≥ria para o novo elemento
 	aux = (TLista) malloc (sizeof(TNo));
 	
-	//testar se a memÛria foi alocada
+	//testar se a mem√≥ria foi alocada
 	if (aux == NULL) //if (!aux)
 	{
 		return FALSE;
 	}
 	else
 	{
-		//Passo2: Armazenar na memÛria alocada o novo valor						
+		//Passo2: Armazenar na mem√≥ria alocada o novo valor						
 		aux->valor = numero;
 		
-		//Passo3: Fazer o prox do novo nÛ apontar para o antigo primeiro elemento da lista		
+		//Passo3: Fazer o prox do novo n√≥ apontar para o antigo primeiro elemento da lista		
 		aux->prox = *L;
 		
-		//Passo4: Mandar L apontar para o novo nÛ			
+		//Passo4: Mandar L apontar para o novo n√≥			
 		*L = aux;
 		
 		//retornando sucesso
@@ -99,10 +90,10 @@ int inserir (TLista* L, int numero)
 
 void exibir (TLista L)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	TLista aux;
 	
-	//verificando se a lista est· vazia
+	//verificando se a lista est√° vazia
 	if (L == NULL)   // if (!L)
 	{
 		printf ("Lista vazia!\n");
@@ -111,16 +102,16 @@ void exibir (TLista L)
 	{
 		printf ("Lista: ");
 		
-		//iniciando aux com o endereÁo do primeiro nÛ
+		//iniciando aux com o endere√ßo do primeiro n√≥
 		aux = L;
 		
-		//percorrendo a lista atÈ o seu final
+		//percorrendo a lista at√© o seu final
 		while (aux != NULL)    //while (aux)
 		{
 			//exibindo cada elemento da lista
 			printf ("%d ", aux->valor);
 			
-			//andando com 'aux' para o prÛximo nÛ
+			//andando com 'aux' para o pr√≥ximo n√≥
 			aux = aux->prox;
 		}
 	}
@@ -128,7 +119,7 @@ void exibir (TLista L)
 
 void copiar (TLista L1, TLista *L2)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	TLista aux1, aux2, novo;
 	
 	//inicializando o aux1
@@ -137,12 +128,12 @@ void copiar (TLista L1, TLista *L2)
 	//percorrendo toda a lista L1
 	while (aux1)
 	{
-		//alocando memÛria para o novo nÛ de L2
+		//alocando mem√≥ria para o novo n√≥ de L2
 		novo = (TLista) malloc (sizeof(TNo));
 		
 		novo->valor = aux1->valor;
 		
-		//verificando se este ser· o primeiro nÛ da lista
+		//verificando se este ser√° o primeiro n√≥ da lista
 		if (!(*L2)) // ou    if (*L2 == NULL)
 		{
 			//*L2 = novo;
