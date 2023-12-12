@@ -1,4 +1,4 @@
-// Questão 6: Determinar a soma e a média dos elementos de um vetor.
+// QUESTÃO 06: Determinar a soma e a média dos elementos de um vetor.
 
 //importação de bibliotecas
 #include <stdio.h>
