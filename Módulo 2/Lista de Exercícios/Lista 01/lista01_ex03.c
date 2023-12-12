@@ -1,38 +1,29 @@
-/******************************************************************************
-	FAETERJ-Rio
-	2FPR - Manhã - 2021/1
-	Professor Leonardo Vianna
-	
-	Data: 10/03/2021   -   Aula de revisão	(Vetores)
-	
-	Exercício 3: Preencher um vetor com números aleatórios.
+// QuestÃ£o 3: Preencher um vetor com nÃºmeros aleatÃ³rios.
 
-******************************************************************************/
-
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//declaração de constantes
+//declaraÃ§Ã£o de constantes
 #define TAM 50
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 void preencher (int vetor[], int tamanho);
 void exibir (int vetor[], int tamanho);
 
-//função main
+//funÃ§Ã£o main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int v[TAM];
 	
-	//chamando a função para preencher o vetor 'v'
+	//chamando a funÃ§Ã£o para preencher o vetor 'v'
 	preencher (v, TAM);
 	
 	//exibindo o vetor 'v'
 	exibir (v, TAM);
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 void preencher(int vetor[], int tamanho)
 {
     //declaracao de variaveis
@@ -40,21 +31,21 @@ void preencher(int vetor[], int tamanho)
     
     srand (time(NULL));
     
-    //corpo da função
+    //corpo da funÃ§Ã£o
     for(i = 0; i < tamanho; i++)
 	{
-		vetor[i] = 1 + rand()%100;  //gerando números aleatórios no intervalo de 1 a 100
+		vetor[i] = 1 + rand()%100;  //gerando nÃºmeros aleatÃ³rios no intervalo de 1 a 100
     }
 }
 
 void exibir (int vetor[], int tamanho)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i;
 	
 	printf ("\nElementos do vetor: ");
 	
-	//percorrendo todas as posições do vetor
+	//percorrendo todas as posiÃ§Ãµes do vetor
 	for (i=0;i<tamanho;i++)
 	{
 		printf ("%d  ", vetor[i]);
