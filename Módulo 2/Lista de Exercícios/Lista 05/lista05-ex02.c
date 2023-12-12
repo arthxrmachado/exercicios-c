@@ -1,17 +1,6 @@
-/********************************************************************************************
+//QUEST√ÉO 02: (verificar na lista de exerc√≠cios 05)
 
-	FPR - Manh„
-	Professor Leonardo Vianna
-	2021/1
-	Data: 28/04/2021
-	
-	Lista de ExercÌcios VII: Strings + recursividade
-	
-	Quest„o 02
-
-*******************************************************************************************/
-
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
 int funcao (int a, int b) 
