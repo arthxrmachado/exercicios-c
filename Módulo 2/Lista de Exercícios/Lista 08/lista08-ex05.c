@@ -1,15 +1,9 @@
 /*
-	FPR - Manh„
-	Data: 30/06/2021
+
+QUEST√ÉO 05: Implementar uma fun√ß√£o que, dadas duas listas din√¢micas do tipo TLista, verifique se elas possuem os mesmos elementos, independente da ordem na
+qual apare√ßam.
 	
-	Lista de ExercÌcios X
-	
-	QUEST√O 05:
-	Implementar uma funÁ„o que, dadas duas listas din‚micas do tipo TLista, 
-	verifique se elas possuem os mesmos elementos, independente da ordem na qual 
-	apareÁam.
-	
-	Exemplos:
+Exemplos:
 	
 		L1		1 2 3 4					possuem os mesmos elementos
 		L2		1 2 3 4
@@ -20,19 +14,20 @@
 		L1		1 3 2 5 4 1 2 3			possuem os mesmos elementos
 		L2		1 2 3 4 5
 		
-		L1 		1 2 3 4 5				n„o possuem os mesmos elementos
+		L1 		1 2 3 4 5				n√£o possuem os mesmos elementos
 		L2		1 4 2 3 5 2 1 4 6 3 2
+
 */
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 #include <stdlib.h>
 
-//declaraÁ„o de constantes
+//declara√ß√£o de constantes
 #define FALSE 0
 #define TRUE 1
 
-//declaraÁ„o de tipos
+//declara√ß√£o de tipos
 typedef struct No {
 	int valor;			//no caso, representando uma lista de inteiros
 	struct No* prox;
@@ -40,7 +35,7 @@ typedef struct No {
 
 typedef TNo* TLista;
 
-//protÛtipos das funÁıes
+//prot√≥tipos das fun√ß√µes
 int possuemMesmosElementos (TLista listaA, TLista listaB);
 int contido (TLista L1, TLista L2);
 int buscar (TLista L, int numero);
@@ -51,7 +46,7 @@ void exibir (TLista L);
 //main
 void main ()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	TLista lista1 = NULL, 
 	       lista2 = NULL,
 		   lista3 = NULL;
@@ -81,7 +76,7 @@ void main ()
 	inserir (&lista3, 1);
 	inserir (&lista3, 5);
 	
-	//exibindo as trÍs listas
+	//exibindo as tr√™s listas
 	printf ("Lista1:\n");
 	exibir (lista1);
 	
@@ -101,7 +96,7 @@ void main ()
 		printf ("\nAs listas lista1 e lista2 nao possuem os mesmos elementos!\n");
 	}
 	
-	//verificando se lista2 e lista3 possuem os mesmos elementos (sabemos que n„o)
+	//verificando se lista2 e lista3 possuem os mesmos elementos (sabemos que n√£o)
 	if (possuemMesmosElementos (lista2, lista3) == TRUE)
 	{
 		printf ("\n\nAs listas lista2 e lista3 possuem os mesmos elementos!\n");
@@ -112,29 +107,29 @@ void main ()
 	}
 }
 
-//implementaÁ„o das funÁıes
+//implementa√ß√£o das fun√ß√µes
 int inserir (TLista* L, int numero)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	TLista aux;
 	
-	//Passo1: alocar memÛria para o novo elemento
+	//Passo1: alocar mem√≥ria para o novo elemento
 	aux = (TLista) malloc (sizeof(TNo));
 	
-	//testar se a memÛria foi alocada
+	//testar se a mem√≥ria foi alocada
 	if (aux == NULL) //if (!aux)
 	{
 		return FALSE;
 	}
 	else
 	{
-		//Passo2: Armazenar na memÛria alocada o novo valor						
+		//Passo2: Armazenar na mem√≥ria alocada o novo valor						
 		aux->valor = numero;
 		
-		//Passo3: Fazer o prox do novo nÛ apontar para o antigo primeiro elemento da lista		
+		//Passo3: Fazer o prox do novo n√≥ apontar para o antigo primeiro elemento da lista		
 		aux->prox = *L;
 		
-		//Passo4: Mandar L apontar para o novo nÛ			
+		//Passo4: Mandar L apontar para o novo n√≥			
 		*L = aux;
 		
 		//retornando sucesso
@@ -144,10 +139,10 @@ int inserir (TLista* L, int numero)
 
 void exibir (TLista L)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	TLista aux;
 	
-	//verificando se a lista est· vazia
+	//verificando se a lista est√° vazia
 	if (L == NULL)   // if (!L)
 	{
 		printf ("Lista vazia!\n");
@@ -156,16 +151,16 @@ void exibir (TLista L)
 	{
 		printf ("Lista: ");
 		
-		//iniciando aux com o endereÁo do primeiro nÛ
+		//iniciando aux com o endere√ßo do primeiro n√≥
 		aux = L;
 		
-		//percorrendo a lista atÈ o seu final
+		//percorrendo a lista at√© o seu final
 		while (aux != NULL)    //while (aux)
 		{
 			//exibindo cada elemento da lista
 			printf ("%d ", aux->valor);
 			
-			//andando com 'aux' para o prÛximo nÛ
+			//andando com 'aux' para o pr√≥ximo n√≥
 			aux = aux->prox;
 		}
 	}
@@ -173,13 +168,13 @@ void exibir (TLista L)
 
 int buscar (TLista L, int numero)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	TLista aux;
 	
-	//inicializando 'aux' de forma que aponte para o primeiro nÛ da lista
+	//inicializando 'aux' de forma que aponte para o primeiro n√≥ da lista
 	aux = L;
 		
-	//percorrendo todos os nÛs da lista
+	//percorrendo todos os n√≥s da lista
 	while (aux != NULL) //while (aux) 
 	{
 		//verificando se 'numero' foi encontrado
@@ -188,18 +183,18 @@ int buscar (TLista L, int numero)
 			return TRUE;
 		}
 				
-		//andar com o 'aux' de forma que ele aponte para o prÛximo nÛ
+		//andar com o 'aux' de forma que ele aponte para o pr√≥ximo n√≥
 		aux = aux->prox;
 	}		
 	
-	//'numero' n„o existe na lista
+	//'numero' n√£o existe na lista
 	return FALSE;
 }
 
 int possuemMesmosElementos (TLista listaA, TLista listaB)
 {
-	if ((contido (listaA, listaB) == TRUE) && //verificando se todos os elementos da listaA est„o na listaB
-	    (contido (listaB, listaA) == TRUE))   //verificando se todos os elementos da listaB est„o na listaA
+	if ((contido (listaA, listaB) == TRUE) && //verificando se todos os elementos da listaA est√£o na listaB
+	    (contido (listaB, listaA) == TRUE))   //verificando se todos os elementos da listaB est√£o na listaA
 	{
 		return TRUE;
 	}
@@ -211,13 +206,13 @@ int possuemMesmosElementos (TLista listaA, TLista listaB)
 
 int contido (TLista L1, TLista L2)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	TLista aux;
 	
 	//fazendo o auxiliar apontar para o primeiro elemento da lista L1
 	aux = L1;
 	
-	//permanecer na lista enquanto o auxiliar n„o chegar a NULL
+	//permanecer na lista enquanto o auxiliar n√£o chegar a NULL
 	while (aux)
 	{		
 		if (buscar (L2, aux->valor) == FALSE)	
@@ -229,6 +224,6 @@ int contido (TLista L1, TLista L2)
 		aux = aux->prox;
 	}
 	
-	//se chegou atÈ aqui, È porque todos os elementos de L1 est„o em L2
+	//se chegou at√© aqui, √© porque todos os elementos de L1 est√£o em L2
 	return TRUE;
 }
