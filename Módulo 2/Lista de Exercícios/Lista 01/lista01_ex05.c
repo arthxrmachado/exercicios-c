@@ -1,4 +1,4 @@
-// Questão 5: Determinar o maior elemento de um vetor.
+// QUESTÃO 05: Determinar o maior elemento de um vetor.
 
 //importação de bibliotecas
 #include <stdio.h>
