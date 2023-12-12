@@ -1,20 +1,14 @@
 /*
-	FPR - Fundamentos de Programação
-	2021/1 - Manhã
-	Data: 02/06/2021
-	
-	Lista de Exercícios IX (Arquivos):
 
-	Questão 03:
-	Desenvolver uma função que, dado um arquivo texto, verifique o número de letras 
-	existentes no mesmo (entendendo que no arquivo podem existir letras, algarismos e 
-	símbolos).
+QUESTÃƒO 03: Desenvolver uma funÃ§Ã£o que, dado um arquivo texto, verifique o nÃºmero de letras existentes no mesmo (entendendo que no arquivo podem existir 
+letras, algarismos e sÃ­mbolos).
+ 
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//declaração de protótipos
+//declaraÃ§Ã£o de protÃ³tipos
 int quantidadeLetras (char nomeArq[]);
 
 //main
@@ -23,10 +17,10 @@ void main ()
 	printf ("Quantidade de caracteres: %d\n", quantidadeLetras ("teste.txt"));
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 int quantidadeLetras (char nomeArq[])
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	FILE *arquivo;
 	int cont = 0;
 	char ch;
@@ -41,7 +35,7 @@ int quantidadeLetras (char nomeArq[])
 	}
 	else
 	{
-		//ler caracteres do arquivo até chegar ao seu final
+		//ler caracteres do arquivo atÃ© chegar ao seu final
 		while (fscanf (arquivo, "%c", &ch) != EOF)
 		{
 			if ((toupper(ch) >= 'A') && (toupper(ch) <= 'Z'))
