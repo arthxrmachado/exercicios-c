@@ -1,4 +1,4 @@
-// Questão 7: Busca linear de um elemento.
+// QUESTÃO 07: Busca linear de um elemento.
 
 //importação de bibliotecas
 #include <stdio.h>
