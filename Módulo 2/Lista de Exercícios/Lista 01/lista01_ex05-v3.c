@@ -1,54 +1,45 @@
-/******************************************************************************
-	FAETERJ-Rio
-	2FPR - Manh„ - 2021/1
-	Professor Leonardo Vianna
-	
-	Data: 10/03/2021   -   Aula de revis„o	(Vetores)
-	
-	ExercÌcio 5: Determinar o maior elemento de um vetor.
-	
-******************************************************************************/
+// Quest√£o 5: Determinar o maior elemento de um vetor.
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 
-//declaraÁ„o de constantes
+//declara√ß√£o de constantes
 #define TAM 10
 
-//protÛtipos das funÁıes
+//prot√≥tipos das fun√ß√µes
 void preencher (int vetor[], int tamanho);
 void exibir (int vetor[], int tamanho);
 int maiorElemento(int vetor[], int tamanho);
 
-//funÁ„o main
+//fun√ß√£o main
 void main ()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int v[TAM], m;
 	
-	//chamando a funÁ„o para preencher o vetor 'v'
+	//chamando a fun√ß√£o para preencher o vetor 'v'
 	preencher (v, TAM);
 	
-	//exibindo o vetor 'v' antes da invers„o
+	//exibindo o vetor 'v' antes da invers√£o
 	exibir (v, TAM);
 	
-	//chamando a funÁ„o para determinar o maior elemento do vetor
+	//chamando a fun√ß√£o para determinar o maior elemento do vetor
 	m = maiorElemento (v, TAM);
 	
 	//exibindo o maior elemento do vetor
 	printf ("Maior elemento = %d\n", m);
 }
 	
-//implementaÁ„o das funÁıes
+//implementa√ß√£o das fun√ß√µes
 int maiorElemento (int vetor[], int tamanho)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i, ma = vetor[0];
 	
 	//varrendo o vetor
 	for (i=1;i<tamanho;i++)
 	{
-		//verificando qual È o maior de todos
+		//verificando qual √© o maior de todos
 		if (vetor[i] > ma)
 		{
 			ma = vetor[i];
@@ -66,21 +57,21 @@ void preencher(int vetor[], int tamanho)
     
     srand (time(NULL));
     
-    //corpo da funÁ„o
+    //corpo da fun√ß√£o
     for(i = 0; i < tamanho; i++)
 	{
-		vetor[i] = 1 + rand()%100;  //gerando n˙meros aleatÛrios no intervalo de 1 a 100
+		vetor[i] = 1 + rand()%100;  //gerando n√∫meros aleat√≥rios no intervalo de 1 a 100
     }
 }
 
 void exibir (int vetor[], int tamanho)
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;
 	
 	printf ("\nElementos do vetor: ");
 	
-	//percorrendo todas as posiÁıes do vetor
+	//percorrendo todas as posi√ß√µes do vetor
 	for (i=0;i<tamanho;i++)
 	{
 		printf ("%d  ", vetor[i]);
