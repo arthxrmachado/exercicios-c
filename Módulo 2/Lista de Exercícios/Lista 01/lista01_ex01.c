@@ -1,44 +1,37 @@
-/******************************************************************************
-	FAETERJ-Rio
-	2FPR - Manhã - 2021/1
-	Professor Leonardo Vianna
-	
-	Data: 10/03/2021   -   Aula de revisão	(Vetores)
-	
-	Exercício 1: Preencher um vetor com os números de 1 até TAM.
+/*
+QuestÃ£o 1: Preencher um vetor com os nÃºmeros de 1 atÃ© TAM.
+*/
 
-******************************************************************************/
-
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//declaração de constantes
+//declaraÃ§Ã£o de constantes
 #define TAM 50
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 void preencher (int vetor[TAM]);
 void exibir (int vetor[TAM]);
 
-//função main
+//funÃ§Ã£o main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int v[TAM];
 	
-	//chamando a função
+	//chamando a funÃ§Ã£o
 	preencher (v);
 	
 	//exibindo o vetor
 	exibir (v);
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 void preencher (int vetor[TAM])
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i;
 	
-	//percorrendo todas as posições do vetor
+	//percorrendo todas as posiÃ§Ãµes do vetor
 	for (i=0;i<TAM;i++)
 	{
 		vetor[i] = i+1;
@@ -47,12 +40,12 @@ void preencher (int vetor[TAM])
 
 void exibir (int vetor[TAM])
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i;
 	
 	printf ("\nElementos do vetor: ");
 	
-	//percorrendo todas as posições do vetor
+	//percorrendo todas as posiÃ§Ãµes do vetor
 	for (i=0;i<TAM;i++)
 	{
 		printf ("%d  ", vetor[i]);
