@@ -1,4 +1,4 @@
-// QUESTÃO 1: Preencher um vetor com os números de 1 até TAM.
+// QUESTÃO 01: Preencher um vetor com os números de 1 até TAM.
 
 //importação de bibliotecas
 #include <stdio.h>
