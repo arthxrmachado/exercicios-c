@@ -1,34 +1,21 @@
-/******************************************************************************
-	FAETERJ-Rio
-	
-	2FPR - Manhã - 2021/1
-	
-	Aluno: Arthur Lourenço Machado
-	
-	Data: 21/04/2021   -   Strings
-	
-	Exercício 4:
-	
-	Fazer uma função que inverta uma string.
+// QUESTÃƒO 04: Fazer uma funÃ§Ã£o que inverta uma string.
 
-******************************************************************************/
-
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 #include <string.h>
 
-//declaração de constantes
+//declaraÃ§Ã£o de constantes
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 
 void inverterString (char string[]);
 
-//função main
+//funÃ§Ã£o main
 
 void main ()
 {
 	
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	
 	char s[20];
 	
@@ -39,37 +26,37 @@ void main ()
 	printf(" Digite uma palavra: ");
 	gets(s);
 	
-	//exibindo antes da inversão
+	//exibindo antes da inversÃ£o
 	
 	printf("\n Antes da inversao %s\n" , s);
 	
-	//chamando a função
+	//chamando a funÃ§Ã£o
 	
 	inverterString(s);
 	
-	//exibindo depois da inversão
+	//exibindo depois da inversÃ£o
 	
 	printf("\n Depois da inversao %s\n", s);
 	
 	
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 
 void inverterString (char string[]){
 	
-	//declaração variáveis
+	//declaraÃ§Ã£o variÃ¡veis
 		
 	int i, j;
 	char aux;
 	
-	//varrendo a string para fazer a inversão
+	//varrendo a string para fazer a inversÃ£o
 	
 	for (i=0, j=strlen(string)-1; i<j; i++, j--)
 	
 	{
 		
-		//trocar de posição os caracteres das posições i e j
+		//trocar de posiÃ§Ã£o os caracteres das posiÃ§Ãµes i e j
 		
 		aux = string[i];
 		string[i] = string[j];
