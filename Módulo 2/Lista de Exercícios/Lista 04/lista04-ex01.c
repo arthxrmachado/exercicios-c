@@ -1,31 +1,24 @@
-/********************************************************************************************
+/*
 
-	FPR - Manh„
-	Professor Leonardo Vianna
-	2021/1
-	Data: 28/04/2021 (continuaÁ„o)
+QUEST√ÉO 01: Suponha que n√£o existissem as fun√ß√µes strlen, strcpy, strcat e strcmp. Pede-se, ent√£o, a implementa√ß√£o de fun√ß√µes que tenham o mesmo 
+objetivo daquelas.	
 	
-	Strings
-	
-	Quest„o 01: Suponha que n„o existissem as funÁıes strlen, strcpy, strcat e strcmp. 
-	Pede-se, ent„o, a implementaÁ„o de funÁıes que tenham o mesmo objetivo daquelas.	
-	
-*******************************************************************************************/
+*/
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 #include <string.h>
 
-//protÛtipos das funÁıes
+//prot√≥tipos das fun√ß√µes
 int tamanho (char s[]);
 void copiar (char s1[], char s2[]);
 void concatenar (char s1[], char s2[]);
 int comparar (char s1[], char s2[]);
 
-//funÁ„o main
+//fun√ß√£o main
 void main ()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	char s1[20], s2[20], s3[20];
 	int retorno;
 	
@@ -37,13 +30,13 @@ void main ()
 	//exibindo a string lida
 	printf ("\nString lida: %s", s2);
 	
-	//testando a funÁ„o copiar
+	//testando a fun√ß√£o copiar
 	copiar (s1, s2);
 	
 	//exibindo a string s1
 	printf ("\ns1: %s", s1);
 	
-	//testando a concatenaÁ„o
+	//testando a concatena√ß√£o
 	copiar (s3, "TESTE");
 	concatenar (s3, s1);
 	
@@ -71,10 +64,10 @@ void main ()
 	printf ("Comparando %s e %s: %d\n", s2, s2, comparar(s2,s2));		
 }
 
-//implementaÁ„o das funÁıes
+//implementa√ß√£o das fun√ß√µes
 int tamanho (char s[])
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;
 	
 	//percorrendo os caracteres da string
@@ -86,7 +79,7 @@ int tamanho (char s[])
 
 void copiar (char s1[], char s2[])
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;
 	
 	//percorrendo os caracteres da segunda string e copiando-os para a primeira
@@ -100,10 +93,10 @@ void copiar (char s1[], char s2[])
 
 void concatenar (char s1[], char s2[])
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i1, i2 ;
 	
-	//fazendo a concatenaÁ„o
+	//fazendo a concatena√ß√£o
 	for (i1=tamanho(s1), i2=0; s2[i2] != '\0'; i1++, i2++)
 	{
 		s1[i1] = s2[i2];
@@ -121,21 +114,21 @@ s2: XYZ
 
 int comparar (char s1[], char s2[])
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	int i;
 	
-	//percorrendo as strings atÈ chegar ao final de uma delas
+	//percorrendo as strings at√© chegar ao final de uma delas
 	//for (i=0;(s1[i] != '\0')&&(s2[i] != '\0');i++)
 	for (i=0;s1[i] && s2[i];i++)
 	{
-		//verificando se, alfabeticamente, s1 est· antes de s2
+		//verificando se, alfabeticamente, s1 est√° antes de s2
 		if (s1[i] < s2[i])
 		{
 			return -1;
 		}
 		else
 		{
-			//verificando se, alfabeticamente, s2 est· antes de s1
+			//verificando se, alfabeticamente, s2 est√° antes de s1
 			if (s1[i] > s2[i])
 			{
 				return 1;
@@ -143,7 +136,7 @@ int comparar (char s1[], char s2[])
 		}
 	}
 	
-	//se chegou atÈ aqui, È pq todos os caracteres s„o iguais
+	//se chegou at√© aqui, √© pq todos os caracteres s√£o iguais
 	//if ((s1[i] == '\0') && (s2[i] == '\0'))
 	//if (!s1[i] && !s2[i])
 	if (s1[i] == s2[i])
