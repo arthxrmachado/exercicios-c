@@ -1,29 +1,21 @@
 /*
-	FPR - Manhã
-	
-	Data: 12/05/2021
-	
-	Lista de Exercícios VIII - Structs
-	
-	Questão 04: 
-	Suponha a existência de um vetor de tamanho TAM, cada posição armazenando o nome 
-	da pessoa e a sua data de aniversário (representada por um struct do tipo TData, 
-	contendo os campos dia e mes). Pede-se o desenvolvimento das seguintes funções:
+QUESTÃƒO 04: Suponha a existÃªncia de um vetor de tamanho TAM, cada posiÃ§Ã£o armazenando o nome da pessoa e a sua data de aniversÃ¡rio (representada por um 
+struct do tipo TData, contendo os campos dia e mes). Pede-se o desenvolvimento das seguintes funÃ§Ãµes:
  	
-	- Determinar a quantidade de pessoas que fazem aniversário no mês M;
- 	- Exibir os nomes de todas pessoas que fazem aniversário entre as datas d1 e d2, 
-	  ambas do tipo Tdata.
+- Determinar a quantidade de pessoas que fazem aniversÃ¡rio no mÃªs M;
+ - Exibir os nomes de todas pessoas que fazem aniversÃ¡rio entre as datas d1 e d2, ambas do tipo Tdata.
+ 
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//declaração de constantes
+//declaraÃ§Ã£o de constantes
 #define TAM 5
 #define TRUE 1
 #define FALSE
 
-//declaração de tipos
+//declaraÃ§Ã£o de tipos
 typedef struct {
 	int dia, mes;
 } TData;
@@ -33,7 +25,7 @@ typedef struct {
 	TData dataAnv;
 } TPessoa;
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 int aniversariantesMes (TPessoa pessoas[], int quant, int mes);
 void exibirPessoas (TPessoa pessoas[], int quant, TData d1, TData d2); 
 int dataNoIntervalo (TData data, TData d1, TData d2);
@@ -42,7 +34,7 @@ void preencherVetor (TPessoa pessoas[], int quant);
 //main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	TPessoa p[TAM];
 	TData data1, data2;
 	
@@ -56,46 +48,46 @@ void main ()
 	//preenchendo o vetor
 	preencherVetor (p, TAM);
 	
-	//testando as funções
-	printf ("\n\nQuantidade de pessoas que fazem aniversário em Junho: %d\n\n", 
+	//testando as funÃ§Ãµes
+	printf ("\n\nQuantidade de pessoas que fazem aniversÃ¡rio em Junho: %d\n\n", 
 	         aniversariantesMes (p, TAM, 6));
 
 	exibirPessoas (p, TAM, data1, data2);	
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 
-//Determinar a quantidade de pessoas que fazem aniversário no mês M.
+//Determinar a quantidade de pessoas que fazem aniversÃ¡rio no mÃªs M.
 int aniversariantesMes (TPessoa pessoas[], int quant, int mes)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i, cont = 0;
 	
 	//varrendo o vetor
 	for (i=0;i<quant;i++)
 	{
-		//verificando se a pessoa na posição 'i' faz aniversário no mês 'mes'
+		//verificando se a pessoa na posiÃ§Ã£o 'i' faz aniversÃ¡rio no mÃªs 'mes'
 		if (pessoas[i].dataAnv.mes == mes)
 		{
 			cont++;
 		}
 	}
 	
-	//retornando a quantidade de aniversariantes do mês 'mes'
+	//retornando a quantidade de aniversariantes do mÃªs 'mes'
 	return cont;
 }
 
-//Exibir os nomes de todas pessoas que fazem aniversário entre as datas d1 e d2, 
+//Exibir os nomes de todas pessoas que fazem aniversÃ¡rio entre as datas d1 e d2, 
 //ambas do tipo Tdata.
 void exibirPessoas (TPessoa pessoas[], int quant, TData d1, TData d2)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i;
 	
 	//varrendo o vetor
 	for (i=0;i<quant;i++)
 	{
-		//verificando se a data de aniversário da pessoa na posição 'i' está entre 'd1' e 'd2'
+		//verificando se a data de aniversÃ¡rio da pessoa na posiÃ§Ã£o 'i' estÃ¡ entre 'd1' e 'd2'
 		if (dataNoIntervalo (pessoas[i].dataAnv, d1, d2) == TRUE)
 		{
 			printf ("%s\n", pessoas[i].nome);
@@ -103,41 +95,41 @@ void exibirPessoas (TPessoa pessoas[], int quant, TData d1, TData d2)
 	}
 }
 
-//verifica se 'data' está no intervalo definido pelas datas 'd1' e 'd2'
+//verifica se 'data' estÃ¡ no intervalo definido pelas datas 'd1' e 'd2'
 int dataNoIntervalo (TData data, TData d1, TData d2)
 {
-	//se o mês de 'data' for inferior ao mês inicial do intervalo... 
+	//se o mÃªs de 'data' for inferior ao mÃªs inicial do intervalo... 
 	if (data.mes < d1.mes)
 	{
 		return FALSE;
 	}
 
-	//se o mês de 'data' for superior ao mês final do intervalo... 	
-	if (data.mes > d2.mes)   //pode juntar essa condição com a anterior em um mesmo if, unidas por ||
+	//se o mÃªs de 'data' for superior ao mÃªs final do intervalo... 	
+	if (data.mes > d2.mes)   //pode juntar essa condiÃ§Ã£o com a anterior em um mesmo if, unidas por ||
 	{
 		return FALSE;
 	}
 	
-	//'data' está no mesmo mês de 'd1', porém em dia anterior
+	//'data' estÃ¡ no mesmo mÃªs de 'd1', porÃ©m em dia anterior
 	if ((data.mes == d1.mes) && (data.dia < d1.dia))
 	{
 		return FALSE;
 	}
 
 
-	//'data' está no mesmo mês de 'd2', porém em dia posterior
+	//'data' estÃ¡ no mesmo mÃªs de 'd2', porÃ©m em dia posterior
 	if ((data.mes == d2.mes) && (data.dia > d2.dia))
 	{
 		return FALSE;
 	}
 
-	//se não caiu em nenhuma condição anterior, é pq a data está entre 'd1' e 'd2'	
+	//se nÃ£o caiu em nenhuma condiÃ§Ã£o anterior, Ã© pq a data estÃ¡ entre 'd1' e 'd2'	
 	return TRUE;
 }
 
 void preencherVetor (TPessoa pessoas[], int quant)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i;
 	
 	//varrendo o vetor
