@@ -1,32 +1,26 @@
 /*
-	FPR - 2021/1
-	Prova a compor a AV2 - 06/07/2021
+	FAETERJ-Rio
 	
-	Questão 02 [2,5 pontos]:
-	Considere a existência de uma lista encadeada L1, do tipo TNotas, que consiste em um ponteiro para TNo1 com os 
-	campos matricula, disciplina e nota - além de um ponteiro para o próximo nó da lista.
-	Pede-se o desenvolvimento de uma função que crie uma lista encadeada L2, do tipo TDisciplina (ponteiro para 
-	TNo2 com os campos disciplina, media e prox).
-
-	Notas:
- 	- Cada nó de L1 representará o desempenho de um aluno em determinada disciplina;
- 	- Por sua vez, cada nó da nova lista armazenará o nome da disciplina e a média da turma na mesma. 
-
-  		
-	ATENÇÃO: ESTE É APENAS UM ESQUELETO DO PROGRAMA, CABENDO AO ALUNO INCLUIR O QUE ELE ACHAR NECESSÁRIO!
+	2FPR - ManhÃ£ - 2021/1
+	
+	Aluno: Arthur LourenÃ§o Machado
+	
+	Data: 06/07/2021   -   AV2
+	
+	QuestÃ£o 02:
 
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-//definição de constantes
+//definiÃ§Ã£o de constantes
 #define TRUE 1
 #define FALSE 0
 
-//declaração de tipos
+//declaraÃ§Ã£o de tipos
 
 typedef struct No1
 {
@@ -50,10 +44,10 @@ typedef struct No2
 typedef TNo1* TNotas;
 typedef TNo2* TDisciplinas;
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 void questao02 (TNotas L1, TDisciplinas *L2);
 
-//algumas funções auxiliares
+//algumas funÃ§Ãµes auxiliares
 void exibirNotas (TNotas L);
 void exibirDisciplinas (TDisciplinas L);
 int inserirNotas (TNotas *L, int matricula, char disciplina[20], float nota);
@@ -61,7 +55,7 @@ int inserirNotas (TNotas *L, int matricula, char disciplina[20], float nota);
 //main
 void main ()
 {
-	//declaração de variáveis [criando uma lista de cada tipo e inicializando-as com NULL]
+	//declaraÃ§Ã£o de variÃ¡veis [criando uma lista de cada tipo e inicializando-as com NULL]
 	TNotas notas = NULL;
 	TDisciplinas disc = NULL;
 	
@@ -81,7 +75,7 @@ void main ()
 	//exibindo a lista de notas
 	exibirNotas (notas);
 	
-	//chamando a função
+	//chamando a funÃ§Ã£o
 	questao02 (notas, &disc);
 	
 	printf("\n\n");
@@ -90,12 +84,12 @@ void main ()
 	exibirDisciplinas (disc);
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 
 /* A partir de uma lista encadeada L1, do tipo TNotas, cria uma lista encadeada L2, do tipo TDisciplina.*/
 void questao02 (TNotas L1, TDisciplinas *L2)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	TNotas aux, aux1;
 	TDisciplinas aux2, novo;
 	int cont = 0;
@@ -124,7 +118,7 @@ void questao02 (TNotas L1, TDisciplinas *L2)
 				
 		}
 		
-		//andar com o 'aux' de forma que ele aponte para o próximo nó
+		//andar com o 'aux' de forma que ele aponte para o prÃ³ximo nÃ³
 		aux = aux->prox;
 			
 	}
@@ -144,7 +138,7 @@ void questao02 (TNotas L1, TDisciplinas *L2)
 			
 			aux2->prox = novo;
 			
-			//andar com o 'aux' de forma que ele aponte para o próximo nó
+			//andar com o 'aux' de forma que ele aponte para o prÃ³ximo nÃ³
 			aux = aux->prox;
 			
 		}
@@ -169,7 +163,7 @@ void questao02 (TNotas L1, TDisciplinas *L2)
 				
 				}
 				
-				//andar com o 'aux' de forma que ele aponte para o próximo nó
+				//andar com o 'aux' de forma que ele aponte para o prÃ³ximo nÃ³
 				aux1 = aux1->prox;
 			
 			}
@@ -178,7 +172,7 @@ void questao02 (TNotas L1, TDisciplinas *L2)
 			
 			printf ("\n\n%.1f\n" , aux2->media);
 			
-			//andar com o 'aux' de forma que ele aponte para o próximo nó
+			//andar com o 'aux' de forma que ele aponte para o prÃ³ximo nÃ³
 			aux = aux->prox;
 				
 		}
@@ -190,10 +184,10 @@ void questao02 (TNotas L1, TDisciplinas *L2)
 
 void exibirNotas (TNotas L)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	TNotas aux;
 	
-	//verificando se a lista está vazia
+	//verificando se a lista estÃ¡ vazia
 	if (L == NULL)   // if (!L)
 	{
 		printf ("Lista vazia!\n");
@@ -202,16 +196,16 @@ void exibirNotas (TNotas L)
 	{
 		printf ("\nLista:\n");
 		
-		//iniciando aux com o endereço do primeiro nó
+		//iniciando aux com o endereÃ§o do primeiro nÃ³
 		aux = L;
 		
-		//percorrendo a lista até o seu final
+		//percorrendo a lista atÃ© o seu final
 		while (aux != NULL)    //while (aux)
 		{
 			//exibindo cada elemento da lista
 			printf ("(%d, %s, %.1f)\n", aux->matricula, aux->disciplina, aux->nota);
 			
-			//andando com 'aux' para o próximo nó
+			//andando com 'aux' para o prÃ³ximo nÃ³
 			aux = aux->prox;
 		}
 	}
@@ -219,12 +213,12 @@ void exibirNotas (TNotas L)
 
 void exibirDisciplinas (TDisciplinas L)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	TDisciplinas aux;
 	
 	aux = L;
 		
-	//verificando se a lista está vazia
+	//verificando se a lista estÃ¡ vazia
 	if (aux == NULL)   // if (!L)
 	{
 		printf ("Lista vazia!\n");
@@ -233,13 +227,13 @@ void exibirDisciplinas (TDisciplinas L)
 	{
 		printf ("\nLista:\n");
 
-		//percorrendo a lista até o seu final
+		//percorrendo a lista atÃ© o seu final
 		while (aux != NULL)    //while (aux)
 		{
 			//exibindo cada elemento da lista
 			printf ("(%s, %.1f)\n", aux->disciplina, aux->media);
 			
-			//andando com 'aux' para o próximo nó
+			//andando com 'aux' para o prÃ³ximo nÃ³
 			aux = aux->prox;
 		}
 	}
@@ -247,28 +241,28 @@ void exibirDisciplinas (TDisciplinas L)
 
 int inserirNotas (TNotas *L, int matricula, char disciplina[20], float nota)
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	TNotas aux;
 	
-	//Passo1: alocar memória para o novo elemento
+	//Passo1: alocar memÃ³ria para o novo elemento
 	aux = (TNotas) malloc (sizeof(TNo1));
 	
-	//testar se a memória foi alocada
+	//testar se a memÃ³ria foi alocada
 	if (aux == NULL) //if (!aux)
 	{
 		return FALSE;
 	}
 	else
 	{
-		//Passo2: Armazenar na memória alocada o novo valor						
+		//Passo2: Armazenar na memÃ³ria alocada o novo valor						
 		aux->matricula = matricula;
 		strcpy (aux->disciplina, disciplina);
 		aux->nota = nota;
 		
-		//Passo3: Fazer o prox do novo nó apontar para o antigo primeiro elemento da lista		
+		//Passo3: Fazer o prox do novo nÃ³ apontar para o antigo primeiro elemento da lista		
 		aux->prox = *L;
 		
-		//Passo4: Mandar L apontar para o novo nó			
+		//Passo4: Mandar L apontar para o novo nÃ³			
 		*L = aux;
 		
 		//retornando sucesso
