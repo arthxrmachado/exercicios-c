@@ -1,31 +1,20 @@
-/********************************************************************************************
+// QUEST√ÉO 05: Fazer uma fun√ß√£o recursiva que verifique se uma string √© um pal√≠ndromo.
 
-	FPR - Manh„
-	Professor Leonardo Vianna
-	2021/1
-	Data: 21/04/2021
-	
-	Strings + recursividade
-	
-	Quest„o 5: fazer uma funÁ„o recursiva que verifique se uma string È um palÌndromo.
-	
-*******************************************************************************************/
-
-//definiÁ„o de constantes
+//defini√ß√£o de constantes
 #define TRUE 1
 #define FALSE 0
 
-//importaÁ„o de bibliotecas
+//importa√ß√£o de bibliotecas
 #include <stdio.h>
 #include <string.h>
 
-//protÛtipos das funÁıes
+//prot√≥tipos das fun√ß√µes
 int palindromo (char string[], int inicio, int fim);
 
-//funÁ„o main
+//fun√ß√£o main
 void main ()
 {
-	//declaraÁ„o de vari·veis
+	//declara√ß√£o de vari√°veis
 	char s[20];
 
 	//leitura da string
@@ -33,7 +22,7 @@ void main ()
 	printf("Digite uma palavra: ");
 	gets(s);
 	
-	//verificando se È um palÌndromo
+	//verificando se √© um pal√≠ndromo
 	if (palindromo(s,0,strlen(s)-1) == 1)
 	{
 		printf ("\nA string %s e' um palindromo.", s);
@@ -44,17 +33,17 @@ void main ()
 	}
 }
 
-//implementaÁ„o das funÁıes
+//implementa√ß√£o das fun√ß√µes
 int palindromo (char string[], int inicio, int fim)
 {
-	//caso base 1: È palÌndromo
+	//caso base 1: √© pal√≠ndromo
 	if (inicio >= fim)
 	{
 		return TRUE;
 	}
 	else
 	{
-		//caso base 2: n„o È palÌndromo
+		//caso base 2: n√£o √© pal√≠ndromo
 		
 		//printf ("Comparando %c com %c\n",string[inicio], string[fim]);
 		if (string[inicio] != string[fim])
