@@ -1,28 +1,16 @@
-/********************************************************************************************
+// QUESTÃƒO 02: Desenvolver uma funÃ§Ã£o recursiva que exiba todos os mÃºltiplos do nÃºmero N, inferiores ao valor V.
 
-	FPR - Manhã
-	Professor Leonardo Vianna
-	2021/1
-	Data: 07/04/2021
-	
-	Lista de Exercícios V - Recursividade
-	
-	Exercício 2: Desenvolver uma função recursiva que exiba 
-	todos os múltiplos do número N, inferiores ao valor V.
-		
-*******************************************************************************************/
-
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//protótipos das funções
+//protÃ³tipos das funÃ§Ãµes
 void multiplos (int n, int v);
 void multiplos_aux (int n, int v, int aux);
 
-//função main
+//funÃ§Ã£o main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int num, limite;
 	
 	//leitura dos dados
